@@ -29,7 +29,7 @@ const MobileNavCurtain = () => {
         <div>
           <Link
             href={"/about-us"}
-            className="border-t group hover:bg-stone-950 transition-colors border-b border-gray-700 justify-between flex items-center text-white text-3xl p-2"
+            className="border-t group hover:bg-[#1e1a36] transition-colors border-b border-gray-700 justify-between flex items-center text-white text-3xl p-2"
           >
             About Us
             <ArrowRight className="group-hover:-translate-x-[-10px] transition-all text-white text-3xl mr-2" />
@@ -38,7 +38,7 @@ const MobileNavCurtain = () => {
         <div className="flex flex-col space-y-2">
           <button
             aria-label="Log in button"
-            className="uppercase cursor-pointer hover:bg-stone-950 bg-black border-2 border-stone-700 text-white text-sm rounded-none h-16"
+            className="uppercase cursor-pointer hover:bg-[#1e1a36]  bg-[#28224e] border-2 border-stone-700 text-white text-sm rounded-none h-16"
           >
             Log in
           </button>
