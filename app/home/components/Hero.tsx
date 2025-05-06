@@ -28,13 +28,13 @@ const Hero = () => {
               word="Quality, affordability, and sustainability - one device at a time?"
               position="right"
               offset="150px"
-              timeOffset={1.2}
+              timeOffset={1}
             />
             <ChatBubble
               word="Yep, 16 years and going."
               position="left"
               offset="280px"
-              timeOffset={2.5}
+              timeOffset={2}
             />
           </div>
         </div>
