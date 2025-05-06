@@ -19,6 +19,9 @@ const Quote = () => {
             <video
               className="w-full lg:max-w-[50vw]"
               src={"/videos/herovideo.mp4"}
+              loop
+              autoPlay
+              muted
               controls
             />
           </div>
