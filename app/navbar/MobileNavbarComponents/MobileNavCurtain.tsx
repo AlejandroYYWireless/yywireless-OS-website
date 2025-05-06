@@ -9,7 +9,7 @@ const MobileNavCurtain = () => {
 
   return (
     <motion.div
-      className="fixed top-[70px] right-0 h-screen bg-black"
+      className="fixed top-[70px] right-0 h-screen bg-[#28224e]"
       initial={{ width: 0 }}
       animate={navOpen ? { width: "100%" } : { width: 0 }}
       transition={{
