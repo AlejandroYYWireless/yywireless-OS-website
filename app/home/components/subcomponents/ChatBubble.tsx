@@ -33,8 +33,8 @@ const ChatBubble = ({
     <svg
       className={`absolute ${
         position === "left"
-          ? "left-[-2px] -bottom-3 rotate-[30deg]"
-          : "rotate-[210deg] -bottom-1 right-[-5px]"
+          ? "left-[-3px] -bottom-3 rotate-[35deg]"
+          : "rotate-[200deg] -bottom-1 right-[-5px]"
       }`}
       width="20"
       height="20"
