@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
 
           {/* Divider */}
-          <div className="h-2 w-full bg-black mt-8 md:mt-0" />
+          <div className="h-2 w-full bg-black mt-8 md:mt-8" />
 
           <p className="uppercase font-inter text-2xl sm:text-3xl lg:text-4xl font-semibold mt-6 md:mt-0">
             follow us on social media
