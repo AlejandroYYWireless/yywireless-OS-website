@@ -31,7 +31,7 @@ const Impact = () => {
 
           {/* Subheading with increased text size */}
           <p
-            className="uppercase text-xl md:text-xl lg:text-4xl mt-6
+            className="uppercase text-xl md:text-xl lg:text-3xl mt-6
                        drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
                        text-[#b7eb6a] italic font-poppins tracking-wider font-semibold"
           >

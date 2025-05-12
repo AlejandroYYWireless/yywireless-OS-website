@@ -27,7 +27,7 @@ const Certifications = () => {
           </div>
           <p
             className={`${
-              reversed ? "md:mb-6" : "md:mt-6"
+              reversed ? "md:mb-12" : "md:mt-12"
             } w-full sm:w-[180px] md:w-[250px] font-montserrat text-white font-bold bg-stone-500/60 p-4 text-center mt-4 md:mt-0`}
           >
             {description}

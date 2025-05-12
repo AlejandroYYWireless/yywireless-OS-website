@@ -7,13 +7,13 @@ const Quote = () => {
           <div className="col-span-1 bg-red-500 h-full lg:col-span-2 z-10 text-xl sm:text-2xl lg:text-3xl font-semibold flex flex-col">
             {/* Quote with gradient background */}
             <div className="h-full font-poppins  self-start p-8 uppercase italic lg:text-4xl  rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
-              <p>
+              <p className="text-justify">
                 &quot;YYWireless started as a small idea in my basement with
                 nothing but determination and a vision. Today, we&apos;ve grown
                 into something much bigger - but the foundation remains the
                 same: hard work, trust, and innovation.&quot;
               </p>
-              <p className="mt-4 text-right">- Ivan Xiao, C.E.O.</p>
+              <p className="mt-4">- Ivan Xiao, C.E.O.</p>
             </div>
           </div>
 
