@@ -4,9 +4,9 @@ const Contact = () => {
   const ItemBox = ({ text }: { text: string }) => {
     return (
       <div
-        className="w-full font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[350px] h-16 md:h-20 lg:h-24  
+        className="w-full font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] md:h-20 lg:h-16  
                     bg-black text-center flex items-center justify-center 
-                    text-xl  sm:text-2xl lg:text-3xl text-white"
+                    text-xl  sm:text-2xl lg:text-2xl text-white"
       >
         {text}
       </div>
@@ -24,9 +24,9 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col min-h-full md:h-screen relative">
-      <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full pt-12">
+      <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center pt-12">
         {/* Left column with image and copyright */}
-        <div className="flex justify-between flex-col items-center">
+        <div className="flex justify-between h-full flex-col items-center">
           <Image
             src="/images/internal/buildingshot.jpg"
             alt="A photo of the YYWireless building"
@@ -34,33 +34,33 @@ const Contact = () => {
             height={660}
             className="place-self-center h-auto md:h-[550px] lg:h-[660px] w-auto object-contain"
           />
-          <span className="text-xl md:text-2xl lg:text-3xl font-normal uppercase mt-0 md:mt-0">
+          <span className="text-xl md:text-2xl lg:text-xl font-normal uppercase mt-0 md:mt-0">
             © 2025 yywireless all rights reserved.
           </span>
         </div>
 
         {/* Right column with contact information */}
-        <div className="p-6 text-center flex flex-col justify-between items-center">
-          <h4 className="text-5xl sm:text-6xl md:text-7xl tracking-widest lg:text-8xl font-lexendMega uppercase font-semibold">
+        <div className="p-6 flex flex-col justify-between items-center">
+          <h4 className="text-5xl sm:text-6xl md:text-5xl tracking-widest lg:text-6xl font-lexendMega uppercase font-semibold">
             Contact Us
           </h4>
 
-          <p className="text-xl sm:text-2xl lg:text-3xl uppercase font-semibold text-center font-montserrat w-[80%] mt-6 md:mt-0">
-            Connecting people through technology --- affordability, reliability,
+          <p className="text-xl sm:text-2xl lg:text-xl max-w-[60%] my-14 uppercase font-semibold text-center font-montserrat w-[80%] ">
+            Connecting people through technology - affordability, reliability,
             and sustainability.
           </p>
 
           {/* Grid for contact boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 w-full max-w-4xl mt-8 md:mt-0 text-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-6 md:gap-10 w-full max-w-4xl mt-8 md:mt-0 text-2xl">
             {items.map((item, index) => (
               <ItemBox key={index} text={item} />
             ))}
           </div>
 
           {/* Divider */}
-          <div className="h-2 w-full bg-black mt-8 md:mt-8" />
+          <div className="h-1 w-full bg-black mt-8 md:my-8" />
 
-          <p className="uppercase font-inter text-2xl sm:text-3xl lg:text-4xl font-semibold mt-6 md:mt-0">
+          <p className="uppercase font-inter text-2xl sm:text-3xl lg:text-2xl mb-5 font-semibold mt-6 md:mt-0">
             follow us on social media
           </p>
 
@@ -73,7 +73,7 @@ const Contact = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
                   y="0px"
-                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12"
                   viewBox="0 0 24 24"
                 >
                   <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"></path>
@@ -84,7 +84,7 @@ const Contact = () => {
               {/* Facebook */}
               <a href="#" className="text-white">
                 <svg
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"
@@ -102,8 +102,8 @@ const Contact = () => {
               {/* TikTok */}
               <a href="#" className="text-white ms-5">
                 <svg
-                  width="60px"
-                  height="60px"
+                  width="40px"
+                  height="40px"
                   viewBox="62.370000000000005 70.49 675.3000000000001 675.3000000000001"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -151,7 +151,7 @@ const Contact = () => {
               {/* Email */}
               <a href="#" className="text-white ms-5">
                 <svg
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"

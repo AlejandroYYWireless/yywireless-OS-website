@@ -18,7 +18,7 @@ const ChatBubble = ({
   horizontalPadding = "20px", // Default padding value
 }: ChatBubbleProps) => (
   <motion.div
-    className={`text-white  font-montserrat font-normal px-4 py-2 bg-black/50 min-h-[75px] h-fit text-2xl flex flex-col justify-center items-center rounded-3xl absolute`}
+    className={`text-white  font-montserrat font-normal px-4 py-2 bg-black/50 min-h-[75px] h-fit text-xl max-w-1/2 flex flex-col justify-center items-center rounded-3xl absolute`}
     style={{
       top: offset,
       left: position === "left" ? horizontalPadding : "auto",
