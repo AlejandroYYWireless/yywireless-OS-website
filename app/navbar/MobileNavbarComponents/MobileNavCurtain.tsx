@@ -9,7 +9,7 @@ const MobileNavCurtain = () => {
 
   return (
     <motion.div
-      className="fixed top-[70px] right-0 h-screen bg-[#28224e]"
+      className="fixed top-[70px] right-0 h-screen bg-[#1C1C1C]"
       initial={{ width: 0 }}
       animate={navOpen ? { width: "100%" } : { width: 0 }}
       transition={{
@@ -38,7 +38,7 @@ const MobileNavCurtain = () => {
         <div className="flex flex-col space-y-2">
           <button
             aria-label="Log in button"
-            className="uppercase cursor-pointer hover:bg-[#1e1a36]  bg-[#28224e] border-2 border-stone-700 text-white text-sm rounded-none h-16"
+            className="uppercase cursor-pointer hover:bg-[#1e1a36]  bg-[#1C1C1C] border-2 border-stone-700 text-white text-sm rounded-none h-16"
           >
             Log in
           </button>

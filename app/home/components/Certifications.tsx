@@ -28,7 +28,7 @@ const Certifications = () => {
           <p
             className={`${
               reversed ? "md:mb-6" : "md:mt-6"
-            } w-full sm:w-[180px] md:w-[200px] text-white text-center mt-4 md:mt-0`}
+            } w-full sm:w-[180px] md:w-[250px] font-montserrat text-white font-bold bg-stone-500/60 p-4 text-center mt-4 md:mt-0`}
           >
             {description}
           </p>
@@ -39,18 +39,23 @@ const Certifications = () => {
 
   return (
     <div className="relative">
-      <div className="flex flex-col justify-center min-h-screen">
+      <div className="flex flex-col justify-center pb-24">
         <div className="absolute inset-0">
           <Image
             src={"/images/assets/gpttech1.png"}
             alt="background"
             fill
-            className="hue-rotate-30 brightness-75 saturate-75 object-cover"
+            className="brightness-50 saturate-0 object-cover"
           />
         </div>
-        <div className="bg-transparent flex-col pt-16 sm:pt-20 md:pt-[100px] lg:pt-[150px] text-center flex justify-center items-center px-4 sm:px-6 relative z-10">
-          <h1 className="green-outline text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-[0px_0px_14px_rgba(115,153,87,1)] text-[#d1f89a] font-bold">
-            Industry certified.
+        <div className="bg-transparent flex-col pt-16 sm:pt-20 md:pt-[100px] lg:pt-[30px] text-center flex justify-center items-center px-4 sm:px-6 relative z-10">
+          <h1
+            className="green-outline uppercase text-9xl
+                       drop-shadow-[0px_0px_8px_rgba(138,253,106,0.8)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
+                       text-[#8aeb6a] font-normal"
+          >
+            {" "}
+            Industry certified
           </h1>
 
           <div className="flex flex-wrap pt-8 sm:pt-12 md:pt-16 lg:pt-[100px] w-full justify-center">

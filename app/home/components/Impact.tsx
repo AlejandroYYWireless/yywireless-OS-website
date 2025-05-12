@@ -11,75 +11,79 @@ const Impact = () => {
             src={"/images/assets/gptchartsup2.png"}
             alt="background"
             fill
-            className="hue-rotate-30 brightness-75 saturate-75 object-cover"
+            className="brightness-50 saturate-0 object-cover"
           />
         </div>
 
-        {/* Content container with responsive spacing */}
+        {/* Content container with increased spacing for slideshow */}
         <div
-          className="bg-transparent z-10 flex-col pt-16 sm:pt-20 md:pt-24 lg:pt-[150px] px-4 sm:px-6 lg:px-8 
-                       text-center flex justify-center items-center"
+          className="bg-transparent z-10 flex-col pt-24 md:pt-32 lg:pt-36 px-8 md:px-12 lg:px-16
+                     text-center flex justify-center items-center"
         >
-          {/* Main heading with responsive text size */}
+          {/* Main heading with increased text size */}
           <h1
-            className="green-outline text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                       drop-shadow-[0px_0px_8px_rgba(115,153,87,0.8)] sm:drop-shadow-[0px_0px_14px_rgba(115,153,87,1)] 
-                       text-[#d1f89a] font-bold"
+            className="uppercase text-7xl md:text-8xl lg:text-8xl
+                       drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
+                       text-[#8aeb6a] font-poppins tracking-wider font-normal"
           >
             Our Impact
           </h1>
 
-          {/* Subheading with responsive text size */}
+          {/* Subheading with increased text size */}
           <p
-            className="text-stone-400 text-xl sm:text-2xl lg:text-3xl mt-6 sm:mt-8 md:mt-10 lg:mt-12 
-                      italic font-semibold text-shadow-lg px-2"
+            className="uppercase text-xl md:text-xl lg:text-5xl mt-6
+                       drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
+                       text-[#b7eb6a] italic font-poppins tracking-wider font-semibold"
           >
             60,000 Tons of CO&#8322; Saved Each Year
           </p>
 
-          {/* Impact description section */}
+          {/* Impact description section with increased spacing */}
           <div
-            className="flex flex-col justify-start items-start mt-6 sm:mt-8 md:mt-10 lg:mt-12 
-                        max-w-full sm:max-w-[90%] md:max-w-[80%] lg:max-w-[1200px]"
+            className="flex flex-col justify-start font-montserrat items-start mt-12 md:mt-16 lg:mt-20
+                      max-w-full md:max-w-5xl lg:max-w-6xl"
           >
-            {/* Main impact text with responsive sizing */}
+            {/* Main impact text with increased size */}
             <p
-              className="text-stone-100 text-start text-lg sm:text-xl md:text-2xl lg:text-3xl 
-                        leading-tight sm:leading-normal md:leading-relaxed"
+              className="text-stone-100 text-start text-2xl md:text-3xl lg:text-4xl
+                        leading-tight md:leading-relaxed font-light"
             >
               By refurbishing over{" "}
-              <span className="font-semibold">1 million devices annually,</span>{" "}
+              <span className="font-bold text-white">
+                1 million devices annually,
+              </span>{" "}
               we prevent the release of{" "}
-              <span className="font-semibold">
+              <span className="font-bold text-white">
                 60,000 metric tons of carbon dioxide--
               </span>{" "}
-              the equivilent of:{" "}
+              the equivilent of:
             </p>
 
-            {/* Impact list with responsive text and spacing */}
-            <ol className="text-start list-disc px-4 sm:px-8 md:px-10 lg:px-12 w-full">
+            {/* Impact list with increased text size and spacing */}
+            <ol className="text-start font-poppins uppercase list-disc px-8 md:px-12 lg:px-16 w-full mt-6 md:mt-8 lg:mt-10">
               <li
-                className="text-stone-100 text-lg sm:text-xl md:text-2xl lg:text-3xl 
-                           leading-tight sm:leading-normal mt-2 sm:mt-3 md:mt-4"
+                className="text-stone-100 text-2xl md:text-3xl lg:text-4xl
+                           leading-tight md:leading-relaxed mt-6 md:mt-8"
               >
-                Taking <span className="font-semibold">13,000+ cars</span> off
+                Taking{" "}
+                <span className="font-bold text-white">13,000+ cars</span> off
                 the road
               </li>
               <li
-                className="text-stone-100 text-lg sm:text-xl md:text-2xl lg:text-3xl 
-                           leading-tight sm:leading-normal mt-2 sm:mt-3 md:mt-4"
+                className="text-stone-100 text-2xl md:text-3xl lg:text-4xl
+                           leading-tight md:leading-relaxed mt-6 md:mt-8"
               >
                 Planting{" "}
-                <span className="font-semibold">
+                <span className="font-bold text-white">
                   1.4 million <span className="text-green-700">trees</span>
                 </span>
               </li>
               <li
-                className="text-stone-100 text-lg sm:text-xl md:text-2xl lg:text-3xl 
-                           leading-tight sm:leading-normal mt-2 sm:mt-3 md:mt-4"
+                className="text-stone-100 text-2xl md:text-3xl lg:text-4xl
+                           leading-tight md:leading-relaxed mt-6 md:mt-8"
               >
                 Offsetting energy use for{" "}
-                <span className="font-semibold">7,000+ homes</span>
+                <span className="font-bold text-white">7,000+ homes</span>
               </li>
             </ol>
           </div>

@@ -10,17 +10,25 @@ const Hero = () => {
             alt="background"
             width={1920}
             height={1220}
-            className="hue-rotate-30 object-cover w-full h-full brightness-75 saturate-75"
+            className="object-cover w-full h-full brightness-50 saturate-0"
             priority
           />
         </div>
-        <div className="bg-transparent flex-col h-screen w-full  text-center flex justify-center items-center">
-          <h1 className="uppercase text-6xl md:text-7xl drop-shadow-[0px_0px_14px_rgba(255,255,255,1)] text-white font-bold">
-            repurpose to reconnect.
+        <div className="uppercase  flex-col h-screen w-full  text-center flex justify-start pt-[200px]">
+          <h1
+            className="green-outline font-poppins text-9xl
+                       drop-shadow-[0px_0px_8px_rgba(138,253,106,0.8)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
+                       text-[#8aeb6a] font-bold"
+          >
+            {" "}
+            repurpose to reconnect
           </h1>
-          <div className="relative w-full container min-h-[400px] max-w-[60vw] mt-4 mx-auto">
+          <p className="text-lime-500 font-poppins  text-center mt-6 z-2 text-3xl font-normal">
+            GIVING TECHNOLOGY - AND CONNECTIONS - A SECOND LIFE
+          </p>
+          <div className="relative bg-stone-300/20  min-h-[400px] w-[70vw] mt-[150px] mx-auto">
             <ChatBubble
-              word="Welcome To YYWireless"
+              word="Welcome To YYWireless!"
               position="left"
               offset="50px"
             />

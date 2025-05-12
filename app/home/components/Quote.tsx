@@ -4,14 +4,17 @@ const Quote = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4 items-start">
           {/* Quote section - full width on mobile, 2 columns on large screens */}
-          <div className="col-span-1 lg:col-span-2 z-10 text-xl sm:text-2xl lg:text-3xl font-semibold flex flex-col">
-            <p className="mb-8 sm:mb-12 lg:mb-24 self-start">
-              &quot;YYWireless started as a small idea in my basement with
-              nothing but determination and a vision. Today, we&apos;ve grown
-              into something much bigger - but the foundation remains the same:
-              hard word, trust, and innovation.&quot;
-            </p>
-            <p>- Ivan Xiao, C.E.O</p>
+          <div className="col-span-1 bg-red-500 h-full lg:col-span-2 z-10 text-xl sm:text-2xl lg:text-3xl font-semibold flex flex-col">
+            {/* Quote with gradient background */}
+            <div className="h-full font-poppins  self-start p-8 uppercase italic lg:text-4xl  rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
+              <p>
+                &quot;YYWireless started as a small idea in my basement with
+                nothing but determination and a vision. Today, we&apos;ve grown
+                into something much bigger - but the foundation remains the
+                same: hard work, trust, and innovation.&quot;
+              </p>
+              <p className="mt-4 text-right">- Ivan Xiao, C.E.O.</p>
+            </div>
           </div>
 
           {/* Video section - full width on mobile, 3 columns on large screens */}

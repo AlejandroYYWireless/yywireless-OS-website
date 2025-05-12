@@ -1,20 +1,29 @@
 "use client";
+
 import { motion } from "framer-motion";
+
 interface ChatBubbleProps {
   word: string;
-  position?: string;
+  position?: "left" | "right";
   offset?: string;
   timeOffset?: number;
+  horizontalPadding?: string; // New prop for horizontal padding
 }
+
 const ChatBubble = ({
   word,
   position = "left",
   offset = "0px",
   timeOffset = 0,
+  horizontalPadding = "20px", // Default padding value
 }: ChatBubbleProps) => (
   <motion.div
-    className={`text-white font-semibold px-4 py-2 bg-black/50 min-h-[75px] h-fit text-2xl flex flex-col justify-center items-center rounded-3xl absolute ${position}-0`}
-    style={{ top: offset }}
+    className={`text-white  font-montserrat font-normal px-4 py-2 bg-black/50 min-h-[75px] h-fit text-2xl flex flex-col justify-center items-center rounded-3xl absolute`}
+    style={{
+      top: offset,
+      left: position === "left" ? horizontalPadding : "auto",
+      right: position === "right" ? horizontalPadding : "auto",
+    }}
     transition={{ duration: 0.5, delay: timeOffset }}
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -24,7 +33,7 @@ const ChatBubble = ({
     <svg
       className={`absolute ${
         position === "left"
-          ? "left-[-2px]  -bottom-3  rotate-[30deg]"
+          ? "left-[-2px] -bottom-3 rotate-[30deg]"
           : "rotate-[210deg] -bottom-1 right-[-5px]"
       }`}
       width="20"
@@ -35,4 +44,5 @@ const ChatBubble = ({
     </svg>
   </motion.div>
 );
+
 export default ChatBubble;

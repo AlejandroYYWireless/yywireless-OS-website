@@ -23,6 +23,7 @@ const Partners = () => {
     {
       name: "FedEx Logo",
       image: "/images/brands/FedEx.png",
+      scale: 1.2,
     },
   ];
 
@@ -38,11 +39,9 @@ const Partners = () => {
       {/* Heading - responsive text size */}
       <div className="absolute top-0 inset-0 w-full">
         <h1
-          className="flex justify-center items-center text-center pt-6 sm:pt-8 md:pt-10 lg:pt-14 
-                       text-3xl sm:text-4xl md:text-5xl lg:text-7xl 
-                       drop-shadow-[0px_0px_8px_rgba(255,255,255,1)] sm:drop-shadow-[0px_0px_10px_rgba(255,255,255,1)] 
-                       md:drop-shadow-[0px_0px_12px_rgba(255,255,255,1)] lg:drop-shadow-[0px_0px_14px_rgba(255,255,255,1)] 
-                       text-white font-bold"
+          className="uppercase text-7xl md:text-8xl lg:text-8xl mt-4
+                       drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
+                       text-[#8aeb6a] font-poppins text-center tracking-wider font-normal"
         >
           Our Partners
         </h1>
@@ -55,7 +54,9 @@ const Partners = () => {
             <img
               src={partner.image}
               alt={partner.name}
-              className="w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px] h-auto object-contain"
+              className={`${
+                partner.scale ? "scale-140" : ""
+              } w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px] h-auto object-contain`}
             />
           </div>
         ))}

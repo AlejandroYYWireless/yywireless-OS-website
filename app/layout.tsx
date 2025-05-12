@@ -1,15 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Inter,
+  Lexend_Exa,
+  Lexend_Mega,
+  Montserrat,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexendmega = Lexend_Mega({
+  variable: "--font-lexendmega",
+  subsets: ["latin"],
+});
+const lexendexa = Lexend_Exa({
+  variable: "--font-lexendexa",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -27,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${lexendexa.variable} ${lexendmega.variable} ${inter.variable} ${montserrat.variable} antialiased`}
       >
         <main>
           <Navbar />

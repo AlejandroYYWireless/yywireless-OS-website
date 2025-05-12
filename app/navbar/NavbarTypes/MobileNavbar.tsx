@@ -56,7 +56,7 @@ const MobileNavbar = () => {
           navState === "visible"
             ? (isAtTop && !shouldShowBlackBg
                 ? "bg-transparent"
-                : "bg-[#28224e]") + " text-white"
+                : "bg-[#1C1C1C]") + " text-white"
             : "-translate-y-full bg-transparent text-white"
         }`}
       >
