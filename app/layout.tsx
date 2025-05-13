@@ -48,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${poppins.variable} ${lexendexa.variable} ${lexendmega.variable} ${inter.variable} ${montserrat.variable} antialiased`}
       >
         <main>

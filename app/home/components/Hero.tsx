@@ -14,7 +14,7 @@ const Hero = () => {
             priority
           />
         </div>
-        <div className="  flex-col h-screen w-full  text-center flex justify-start pt-[200px]">
+        <div className="flex-col h-screen w-full  text-center flex justify-start pt-[200px]">
           <h1
             className="green-outline uppercase font-poppins text-8xl
                        drop-shadow-[0px_0px_8px_rgba(138,253,106,0.8)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
@@ -26,7 +26,7 @@ const Hero = () => {
           <p className="text-lime-500 font-poppins text-center mt-6 z-2 text-2xl font-normal">
             GIVING TECHNOLOGY - AND CONNECTIONS - A SECOND LIFE
           </p>
-          <div className="relative bg-stone-300/20  min-h-[400px] w-[70vw] mt-[150px] mx-auto">
+          <div className="relative bg-stone-300/20  min-h-[400px] w-[600px] md:w-[1100px] mt-[150px] mx-auto">
             <ChatBubble
               word="Welcome To YYWireless!"
               position="left"
