@@ -1,25 +1,40 @@
+"use client";
+import { useState } from "react";
+import { toast } from "sonner";
 const Contact = () => {
-  const ItemBox = ({ text }: { text: string }) => {
-    return (
-      <div
-        className="w-full font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] md:h-20 lg:h-16  
-                    bg-black text-center flex items-center justify-center 
-                    text-xl  sm:text-2xl lg:text-2xl text-white"
-      >
-        {text}
-      </div>
-    );
+  const [email, setEmail] = useState("");
+  const [reason, setReason] = useState("");
+  // const ItemBox = ({ text }: { text: string }) => {
+  //   return (
+  //     <div
+  //       className="w-full font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] md:h-20 lg:h-16
+  //                   bg-black text-center flex items-center justify-center
+  //                   text-xl  sm:text-2xl lg:text-2xl text-white"
+  //     >
+  //       {text}
+  //     </div>
+  //   );
+  // };
+
+  // const items = [
+  //   "Wholesale",
+  //   "Inventory",
+  //   "Retail",
+  //   "Fun Stuff",
+  //   "Recycle",
+  //   "Career",
+  // ];
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    // Form submission logic would go here
+    // Reset form after submission
+    toast.success("Successfully submitted! We'll be in touch shortly!", {
+      position: "top-center",
+    });
+    setEmail("");
+    setReason("");
   };
-
-  const items = [
-    "Wholesale",
-    "Inventory",
-    "Retail",
-    "Fun Stuff",
-    "Recycle",
-    "Career",
-  ];
-
   return (
     <div id="contact-us" className="flex flex-col min-h-full relative">
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center pt-12">
@@ -33,7 +48,7 @@ const Contact = () => {
         </div>
 
         {/* Right column with contact information */}
-        <div className="p-6 flex flex-col justify-between items-center">
+        <div className="p-6 flex flex-col justify-between  items-center">
           <h4 className="text-5xl sm:text-6xl md:text-5xl tracking-widest lg:text-6xl font-lexendMega uppercase font-semibold">
             Contact Us
           </h4>
@@ -44,11 +59,40 @@ const Contact = () => {
           </p>
 
           {/* Grid for contact boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-6 md:gap-10 w-full max-w-4xl mt-8 md:mt-0 text-2xl">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-6 md:gap-10 w-full max-w-4xl mt-8 md:mt-0 text-2xl">
             {items.map((item, index) => (
               <ItemBox key={index} text={item} />
             ))}
-          </div>
+          </div> */}
+
+          <form
+            onSubmit={handleSubmit}
+            className="w-full md:w-1/2 border p-6 space-y-2"
+          >
+            <input
+              className="p-2 w-full text-2xl"
+              type="email"
+              placeholder="Enter email here..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <div className="bg-lime-500 h-[2px]" />
+            <textarea
+              className="text-2xl p-2 min-h-[100px] w-full"
+              placeholder="Enter reason for contact..."
+              value={reason}
+              onChange={(e) => setReason(e.target.value)}
+              required
+            />
+            <button
+              type="submit"
+              className="bg-lime-500 w-full text-white cursor-pointer text-2xl p-2 disabled:bg-accent disabled:text-black disabled:cursor-not-allowed"
+              disabled={!email || !reason}
+            >
+              Submit
+            </button>
+          </form>
 
           {/* Divider */}
           <div className="h-1 w-full bg-black mt-8 md:my-8" />

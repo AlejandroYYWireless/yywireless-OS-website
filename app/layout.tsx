@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar/navbar";
+import { Toaster } from "sonner";
 
 const lexendmega = Lexend_Mega({
   variable: "--font-lexendmega",
@@ -52,6 +53,8 @@ export default function RootLayout({
         className={`${poppins.variable} ${lexendexa.variable} ${lexendmega.variable} ${inter.variable} ${montserrat.variable} antialiased`}
       >
         <main>
+          <Toaster />
+
           <Navbar />
           {children}
         </main>
