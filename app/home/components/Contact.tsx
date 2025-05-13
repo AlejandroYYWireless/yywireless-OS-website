@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Contact = () => {
   const ItemBox = ({ text }: { text: string }) => {
     return (
@@ -26,17 +24,12 @@ const Contact = () => {
     <div className="flex flex-col min-h-full md:h-screen relative">
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center pt-12">
         {/* Left column with image and copyright */}
-        <div className="flex justify-between h-full flex-col items-center">
-          <Image
+        <div className="flex justify-between h-[800px] w-full mb-14 flex-col items-center">
+          <img
             src="/images/internal/buildingshot.jpg"
             alt="A photo of the YYWireless building"
-            width={600}
-            height={660}
-            className="place-self-center h-auto md:h-[550px] lg:h-[660px] w-auto object-contain"
+            className="place-self-center h-full  w-full object-contain"
           />
-          <span className="text-xl md:text-2xl lg:text-xl font-normal uppercase mt-0 md:mt-0">
-            © 2025 yywireless all rights reserved.
-          </span>
         </div>
 
         {/* Right column with contact information */}
@@ -167,6 +160,9 @@ const Contact = () => {
       </div>
 
       {/* Footer SVG */}
+      <span className="text-xl mx-auto ml-[300px] md:text-2xl lg:text-xl font-normal uppercase mt-0 md:mt-0">
+        © 2025 yywireless all rights reserved.
+      </span>
       <img
         className="w-full h-[160px] sm:h-[200px] md:h-[240px]"
         src="/images/extraassets/footersvg.svg"
