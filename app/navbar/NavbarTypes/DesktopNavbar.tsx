@@ -51,34 +51,34 @@ const DesktopNavbar = () => {
 
           {/* standard links */}
           <div className="flex items-center pt-4 text-2xl font-semibold justify-around h-24 w-[70vw]">
-            <a
+            <Link
               href="/"
               className="uppercase text-shadow-lg"
               onClick={(e) => handleSmoothScroll(e, "our-story")}
             >
               Our Story
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="uppercase text-shadow-lg"
               onClick={(e) => handleSmoothScroll(e, "our-service")}
             >
               Our Service
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="uppercase text-shadow-lg"
               onClick={(e) => handleSmoothScroll(e, "wholesale")}
             >
               Wholesale
-            </a>
-            <a
-              href="/"
+            </Link>
+            <Link
+              href="#"
               className="uppercase text-shadow-lg"
               onClick={(e) => handleSmoothScroll(e, "retail")}
             >
               Retail
-            </a>
+            </Link>
             <a
               href="#contact-us"
               className="uppercase text-shadow-lg"
