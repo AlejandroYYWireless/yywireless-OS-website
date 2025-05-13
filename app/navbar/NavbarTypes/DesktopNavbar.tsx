@@ -1,11 +1,35 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useCallback } from "react";
 import Link from "next/link";
 import { UserCircle } from "lucide-react";
 
 const DesktopNavbar = () => {
+  // Smooth scroll handler function with type safety
+  const handleSmoothScroll = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+      e.preventDefault();
+
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Calculate offset to account for fixed navbar
+        const navbarHeight = 96; // Approximate height of your navbar (24px + padding)
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    },
+    []
+  );
+
   return (
     <>
       {/* Static navbar with margin on top */}
@@ -27,21 +51,41 @@ const DesktopNavbar = () => {
 
           {/* standard links */}
           <div className="flex items-center pt-4 text-2xl font-semibold justify-around h-24 w-[70vw]">
-            <Link href="/" className="uppercase text-shadow-lg">
+            <a
+              href="/"
+              className="uppercase text-shadow-lg"
+              onClick={(e) => handleSmoothScroll(e, "our-story")}
+            >
               Our Story
-            </Link>
-            <Link href="/" className="uppercase text-shadow-lg">
+            </a>
+            <a
+              href="/"
+              className="uppercase text-shadow-lg"
+              onClick={(e) => handleSmoothScroll(e, "our-service")}
+            >
               Our Service
-            </Link>
-            <Link href="/" className="uppercase text-shadow-lg">
+            </a>
+            <a
+              href="/"
+              className="uppercase text-shadow-lg"
+              onClick={(e) => handleSmoothScroll(e, "wholesale")}
+            >
               Wholesale
-            </Link>
-            <Link href="/" className="uppercase text-shadow-lg">
+            </a>
+            <a
+              href="/"
+              className="uppercase text-shadow-lg"
+              onClick={(e) => handleSmoothScroll(e, "retail")}
+            >
               Retail
-            </Link>
-            <Link href="/" className="uppercase text-shadow-lg">
+            </a>
+            <a
+              href="#contact-us"
+              className="uppercase text-shadow-lg"
+              onClick={(e) => handleSmoothScroll(e, "contact-us")}
+            >
               Contact Us
-            </Link>
+            </a>
             <Link
               href="/"
               className="uppercase flex gap-4 items-center text-shadow-lg"
