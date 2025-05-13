@@ -21,7 +21,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-full md:h-screen relative">
+    <div className="flex flex-col min-h-full relative">
       <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center pt-12">
         {/* Left column with image and copyright */}
         <div className="flex justify-between h-[800px] w-full mb-14 flex-col items-center">
@@ -164,7 +164,7 @@ const Contact = () => {
         © 2025 yywireless all rights reserved.
       </span>
       <img
-        className="w-full h-[160px] sm:h-[200px] md:h-[240px]"
+        className="w-full h-[100px]"
         src="/images/extraassets/footersvg.svg"
         alt="Footer decoration"
       />
