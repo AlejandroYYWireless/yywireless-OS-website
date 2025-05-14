@@ -33,7 +33,7 @@ const Quote = () => {
 
       {/* Bottom wave image */}
       <img
-        className="w-full bottom-0 h-[120px] sm:h-[180px] lg:h-[240px] absolute"
+        className="bottom-0 absolute"
         src="/images/extraassets/bottomwave.svg"
         alt="Decorative wave design"
       />

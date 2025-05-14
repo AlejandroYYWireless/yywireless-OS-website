@@ -240,11 +240,7 @@ const Contact = () => {
       <span className="text-xl mx-auto ml-[300px] md:text-2xl lg:text-xl font-normal uppercase mt-0 md:mt-0">
         © 2025 yywireless all rights reserved.
       </span>
-      <img
-        className="w-full h-[100px]"
-        src="/images/extraassets/footersvg.svg"
-        alt="Footer decoration"
-      />
+      <img src="/images/extraassets/footer.svg" alt="Footer decoration" />
     </div>
   );
 };
