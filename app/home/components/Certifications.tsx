@@ -2,15 +2,15 @@
 import Image from "next/image";
 import React from "react";
 
-const Certifications = () => {
-  interface CertificateItemProps {
-    title: string;
-    description: string;
-    imageUrl: string;
-    reversed?: boolean;
-    link?: string;
-  }
+interface CertificateItemProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  reversed?: boolean;
+  link?: string;
+}
 
+const Certifications = () => {
   const CertificateItem = ({
     title,
     description,
@@ -19,8 +19,13 @@ const Certifications = () => {
     link,
   }: CertificateItemProps) => {
     const handleClick = () => {
-      link && window.open("https://sustainableelectronics.org/", "_blank");
+      if (link) {
+        window.open("https://sustainableelectronics.org/", "_blank");
+      } else {
+        console.log("clicked");
+      }
     };
+
     return (
       <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
         <div
@@ -31,7 +36,7 @@ const Certifications = () => {
           <div
             onClick={handleClick}
             className={`${
-              link && "cursor-pointer"
+              link ? "cursor-pointer" : ""
             } relative w-[150px] h-[150px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]`}
           >
             <Image src={imageUrl} alt={title} fill className="object-contain" />
