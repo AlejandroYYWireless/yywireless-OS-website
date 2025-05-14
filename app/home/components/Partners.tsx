@@ -39,7 +39,7 @@ const Partners = () => {
       {/* Heading - responsive text size */}
       <div className="absolute top-0 inset-0 w-full">
         <h1
-          className="uppercase text-7xl md:text-8xl lg:text-7xl mt-4
+          className="uppercase text-5xl md:text-8xl lg:text-7xl mt-4
                        drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
                        text-[#8aeb6a] font-poppins text-center tracking-wider font-normal"
         >
@@ -48,7 +48,7 @@ const Partners = () => {
       </div>
 
       {/* Partners grid - responsive columns and spacing */}
-      <div className="gap-4 p-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 place-items-center">
+      <div className="gap-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 place-items-center">
         {partners.map((partner, index) => (
           <div key={index} className="flex justify-center items-center p-4">
             <img
@@ -64,8 +64,8 @@ const Partners = () => {
 
       {/* Bottom wave - responsive height */}
       <img
-        className="w-full h-[120px] sm:h-[140px] md:h-[170px] lg:h-[200px]"
-        src="/images/extraassets/threebottomwave.svg"
+        className="w-full"
+        src="/images/extraassets/triplewave.svg"
         alt="Decorative bottom wave"
       />
     </div>

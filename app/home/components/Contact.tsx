@@ -36,7 +36,7 @@ const Contact = () => {
   const FormDialog = ({ contactType }: { contactType: string }) => (
     <Dialog>
       <DialogTrigger
-        className="w-full cursor-pointer font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] md:h-20 lg:h-16
+        className="w-full cursor-pointer font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] h-14 md:h-20 lg:h-18
                     bg-black text-center flex items-center justify-center
                     text-xl  sm:text-2xl lg:text-2xl text-white"
       >

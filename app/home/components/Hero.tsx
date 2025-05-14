@@ -16,7 +16,7 @@ const Hero = () => {
         </div>
         <div className="flex-col h-screen w-full  text-center flex justify-start pt-[200px]">
           <h1
-            className="green-outline uppercase font-poppins text-8xl
+            className="green-outline uppercase font-poppins text-6xl md:text-8xl
                        drop-shadow-[0px_0px_8px_rgba(138,253,106,0.8)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
                        text-[#8aeb6a] font-bold"
           >

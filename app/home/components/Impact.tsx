@@ -22,7 +22,7 @@ const Impact = () => {
         >
           {/* Main heading with increased text size */}
           <h1
-            className="uppercase text-7xl md:text-8xl lg:text-7xl
+            className="uppercase text-5xl md:text-8xl lg:text-7xl
                        drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
                        text-[#8aeb6a] font-poppins tracking-wider font-normal"
           >
