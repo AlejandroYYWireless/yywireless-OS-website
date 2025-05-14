@@ -39,7 +39,7 @@ const Partners = () => {
       {/* Heading - responsive text size */}
       <div className="absolute top-0 inset-0 w-full">
         <h1
-          className="uppercase text-5xl md:text-8xl lg:text-7xl mt-4
+          className="uppercase text-5xl md:text-8xl lg:text-8xl mt-4
                        drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
                        text-[#8aeb6a] font-poppins text-center tracking-wider font-normal"
         >
