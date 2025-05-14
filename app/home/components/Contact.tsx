@@ -15,8 +15,8 @@ const Contact = () => {
 
   const items = [
     "Wholesale",
-    "Retail",
     "Customer Service",
+    "Retail",
     "General",
     "Marketing",
     "Career",
