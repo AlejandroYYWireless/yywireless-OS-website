@@ -6,8 +6,8 @@ const Quote = () => {
           {/* Quote section - full width on mobile, 2 columns on large screens */}
           <div className="col-span-1 h-full lg:col-span-2 z-10 text-xl sm:text-2xl lg:text-3xl font-semibold flex flex-col">
             {/* Quote with gradient background */}
-            <div className="h-full  text-right flex flex-col justify-between font-poppins  self-start p-4 py-2 uppercase italic lg:text-4xl  rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
-              <p className="leading-relaxed">
+            <div className="h-full  text-right flex flex-col justify-between font-poppins  self-start p-4 py-2 uppercase  lg:text-4xl  rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
+              <p className="leading-relaxed italic">
                 &quot;YYWireless started as a small idea in my basement with
                 nothing but determination and a vision. Today, we&apos;ve grown
                 into something much bigger - but the foundation remains the
