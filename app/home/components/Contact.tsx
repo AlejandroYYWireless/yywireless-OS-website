@@ -122,7 +122,11 @@ const Contact = () => {
           <div className="sm:flex sm:items-center sm:justify-between w-full">
             <div className="flex items-center space-x-8 sm:space-x-12 md:space-x-16 mt-6 sm:justify-center sm:mt-0 mx-auto">
               {/* Instagram */}
-              <a href="#" className="text-white ms-5">
+              <a
+                href="https://www.instagram.com/yywireless"
+                target="_blank"
+                className="text-white ms-5"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -136,7 +140,11 @@ const Contact = () => {
               </a>
 
               {/* Facebook */}
-              <a href="#" className="text-white">
+              <a
+                href="https://www.facebook.com/profile.php?id=61573540568212"
+                target="_blank"
+                className="text-white"
+              >
                 <svg
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
                   aria-hidden="true"
@@ -154,7 +162,11 @@ const Contact = () => {
               </a>
 
               {/* TikTok */}
-              <a href="#" className="text-white ms-5">
+              <a
+                href="https://www.tiktok.com/@yywireless"
+                target="_blank"
+                className="text-white ms-5"
+              >
                 <svg
                   width="40px"
                   height="40px"
@@ -202,8 +214,12 @@ const Contact = () => {
                 <span className="sr-only">Twitter page</span>
               </a>
 
-              {/* Email */}
-              <a href="#" className="text-white ms-5">
+              {/* Linkedin */}
+              <a
+                href="https://www.linkedin.com/company/yywireless-bayshine"
+                target="_blank"
+                className="text-white ms-5"
+              >
                 <svg
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
                   aria-hidden="true"
@@ -213,7 +229,7 @@ const Contact = () => {
                 >
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
-                <span className="sr-only">Email</span>
+                <span className="sr-only">LinkedIn</span>
               </a>
             </div>
           </div>
