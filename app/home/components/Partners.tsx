@@ -17,13 +17,13 @@ const Partners = () => {
       image: "/images/brands/USPS.png",
     },
     {
-      name: "UPS Logo",
-      image: "/images/brands/UPS.png",
-    },
-    {
       name: "FedEx Logo",
       image: "/images/brands/FedEx.png",
       scale: 1.2,
+    },
+    {
+      name: "UPS Logo",
+      image: "/images/brands/UPS.png",
     },
   ];
 
@@ -50,7 +50,10 @@ const Partners = () => {
       {/* Partners grid - responsive columns and spacing */}
       <div className="gap-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 place-items-center">
         {partners.map((partner, index) => (
-          <div key={index} className="flex justify-center items-center p-4">
+          <div
+            key={index}
+            className="flex justify-center items-center p-4 my-6"
+          >
             <img
               src={partner.image}
               alt={partner.name}

@@ -34,7 +34,7 @@ const DesktopNavbar = () => {
     <>
       {/* Static navbar with margin on top */}
       <nav className="fixed top-6 left-0 p-0 w-full bg-stone-500/40 text-white z-50">
-        <div className="flex justify-between items-center px-8">
+        <div className="flex justify-center items-center px-8">
           <Link
             href={"/"}
             className="flex items-center gap-2 cursor-pointer pr-2"
