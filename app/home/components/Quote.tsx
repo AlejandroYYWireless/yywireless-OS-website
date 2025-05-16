@@ -1,6 +1,6 @@
 const Quote = () => {
   return (
-    <div className="min-h-[90vh] md:min-h-screen relative flex justify-center items-start pt-16 md:pt-24 lg:pt-[120px] px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen md:min-h-[90vh] lg:min-h-[80vh] xl:min-h-screen relative flex justify-center items-start pt-16 md:pt-24 lg:pt-[120px] px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="grid  grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4 items-start">
           {/* Quote section - full width on mobile, 2 columns on large screens */}
