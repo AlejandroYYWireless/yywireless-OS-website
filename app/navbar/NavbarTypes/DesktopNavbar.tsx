@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useCallback } from "react";
 import Link from "next/link";
-import { UserCircle } from "lucide-react";
 
 const DesktopNavbar = () => {
   // Smooth scroll handler function with type safety
