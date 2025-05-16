@@ -64,7 +64,7 @@ const DesktopNavbar = () => {
               className="uppercase text-shadow-lg"
               onClick={(e) => handleSmoothScroll(e, "our-service")}
             >
-              Our Service
+              Our Services
             </Link>
             <Link
               href="/"
