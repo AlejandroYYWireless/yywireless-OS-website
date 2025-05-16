@@ -35,10 +35,10 @@ const Quote = () => {
           >
             <div className="quote-container h-full flex flex-col justify-center relative bg-gradient-to-br from-[#379C2A] to-[#8BC53E] p-4 sm:p-5 md:p-6 rounded-lg shadow-lg">
               <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl text-white font-semibold xl:font-bold italic leading-snug xl:leading-tight mb-4 relative z-10 font-poppins">
-                "YYWireless started as a small idea in my basement with nothing
-                but determination and a vision. Today, we&apos;ve grown into
-                something much bigger - but the foundation remains the same:
-                hard work, trust, and innovation."
+                &quot;YYWireless started as a small idea in my basement with
+                nothing but determination and a vision. Today, we&apos;ve grown
+                into something much bigger - but the foundation remains the
+                same: hard work, trust, and innovation.&quot;
               </blockquote>
 
               <div className="flex justify-end mt-auto">
