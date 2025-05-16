@@ -22,7 +22,7 @@ const Quote = () => {
   };
 
   return (
-    <div className="min-h-screen xl:min-h-[90vh] relative flex justify-center items-start pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
+    <div className="h-fit py-14 lg:min-h-screen xl:min-h-[90vh] relative flex justify-center items-start pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col w-full xl:flex-row xl:items-center xl:gap-8">
           {/* Quote section - adjusted for balanced height */}
