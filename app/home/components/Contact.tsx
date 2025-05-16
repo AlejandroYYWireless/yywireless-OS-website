@@ -9,6 +9,9 @@ import {
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { toast } from "sonner";
+import Image from "next/image";
+import Link from "next/link";
+
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [reason, setReason] = useState("");
@@ -36,25 +39,28 @@ const Contact = () => {
   const FormDialog = ({ contactType }: { contactType: string }) => (
     <Dialog>
       <DialogTrigger
-        className="w-full cursor-pointer font-lexendexa uppercase tracking-widest md:w-[300px] lg:w-[300px] h-14 md:h-20 lg:h-18
-                    bg-black text-center flex items-center justify-center
-                    text-xl  sm:text-2xl lg:text-2xl text-white"
+        className="w-full cursor-pointer font-lexendexa uppercase tracking-widest 
+                  md:w-[250px] lg:w-[280px] xl:w-[300px] 
+                  h-12 sm:h-14 md:h-16 lg:h-18
+                  bg-black text-center flex items-center justify-center
+                  text-lg sm:text-xl lg:text-2xl text-white
+                  transition-all duration-200 hover:bg-black/90"
       >
         {contactType}
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="sm:max-w-md md:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-semibold">
+          <DialogTitle className="text-xl sm:text-2xl font-semibold">
             Contact {contactType}
           </DialogTitle>
-          <DialogDescription className="bg-muted/50 p-2 rounded-lg">
+          <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
             Enter the form below with your email and reason for contacting and
             we will reach out to you very soon.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="w-full space-y-2">
           <input
-            className="p-2 w-full text-2xl"
+            className="p-2 w-full text-lg sm:text-xl md:text-2xl border border-gray-300 rounded-md"
             type="email"
             placeholder="Enter email here..."
             value={email}
@@ -63,7 +69,7 @@ const Contact = () => {
           />
           <div className="bg-lime-500 h-[2px]" />
           <textarea
-            className="text-2xl p-2 min-h-[100px] w-full"
+            className="text-lg sm:text-xl md:text-2xl p-2 min-h-[100px] w-full border border-gray-300 rounded-md"
             placeholder="Enter reason for contact..."
             value={reason}
             onChange={(e) => setReason(e.target.value)}
@@ -71,7 +77,9 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="bg-lime-500 w-full text-white cursor-pointer text-2xl p-2 disabled:bg-accent disabled:text-black disabled:cursor-not-allowed"
+            className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
+                     disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
+                     transition-colors hover:bg-lime-600"
             disabled={!email || !reason}
           >
             Submit
@@ -82,30 +90,38 @@ const Contact = () => {
   );
 
   return (
-    <div id="contact-us" className="flex flex-col min-h-full relative">
-      <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center md:pt-12">
+    <div
+      id="contact-us"
+      className="flex flex-col min-h-full pt-8 md:pt-0 relative"
+    >
+      <div className="grid grid-cols-1 font-montserrat lg:grid-cols-2 h-full place-items-center md:pt-8 lg:pt-12 gap-6 md:gap-0">
         {/* Left column with image and copyright */}
-        <div className="flex justify-between h-full md:h-[600px] w-full mb-14 flex-col items-center">
-          <img
-            src="/images/internal/buildingFront.jpg"
-            alt="A photo of the YYWireless building"
-            className="place-self-center h-full  w-full object-contain"
-          />
+        <div className="flex justify-between h-auto md:h-[500px] lg:h-[550px] xl:h-[600px] w-full mb-8 md:mb-10 flex-col items-center">
+          <div className="relative w-full h-[300px] sm:h-[400px] md:h-full">
+            <Image
+              src="/images/internal/buildingFront.jpg"
+              alt="A photo of the YYWireless building"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
+          </div>
         </div>
 
         {/* Right column with contact information */}
-        <div className="p-6 flex flex-col justify-between  items-center">
-          <h4 className="text-5xl sm:text-6xl md:text-5xl tracking-widest lg:text-6xl font-lexendMega uppercase font-semibold">
+        <div className="p-4 sm:p-6 flex flex-col justify-between items-center w-full max-w-3xl">
+          <h4 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-lexendMega uppercase font-semibold tracking-widest">
             Contact Us
           </h4>
 
-          <p className="text-xl sm:text-2xl lg:text-xl max-w-[60%] my-14 uppercase font-semibold text-center font-montserrat w-[80%] ">
+          <p className="text-lg sm:text-xl lg:text-xl max-w-[80%] sm:max-w-[70%] md:max-w-[80%] my-8 sm:my-10 md:my-12 lg:my-14 uppercase font-semibold text-center font-montserrat">
             Connecting people through technology - affordability, reliability,
             and sustainability.
           </p>
 
           {/* Grid for contact boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-6 md:gap-10 w-full max-w-4xl mt-8 md:mt-0 text-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-full max-w-4xl">
             {items.map((item, index) => (
               <FormDialog key={index} contactType={item} />
             ))}
@@ -114,39 +130,40 @@ const Contact = () => {
           {/* Divider */}
           <div className="h-1 w-full bg-black mt-8 md:my-8" />
 
-          <p className="uppercase font-inter text-2xl sm:text-3xl lg:text-2xl mb-5 font-semibold mt-6 md:mt-0">
+          <p className="uppercase font-inter text-xl sm:text-2xl lg:text-2xl mb-4 sm:mb-5 font-semibold mt-6 md:mt-0">
             follow us on social media
           </p>
 
           {/* Social media links */}
           <div className="sm:flex sm:items-center sm:justify-between w-full">
-            <div className="flex items-center space-x-8 sm:space-x-12 md:space-x-16 mt-6 sm:justify-center sm:mt-0 mx-auto">
+            <div className="flex items-center space-x-6 sm:space-x-8 md:space-x-12 lg:space-x-16 mt-4 justify-center sm:justify-center sm:mt-0 mx-auto w-full">
               {/* Instagram */}
-              <a
+              <Link
                 href="https://www.instagram.com/yywireless"
                 target="_blank"
-                className="text-white ms-5"
+                className="text-white transition-transform hover:scale-110"
+                aria-label="Instagram"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
                   y="0px"
-                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
                   viewBox="0 0 24 24"
                 >
                   <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"></path>
                 </svg>
-                <span className="sr-only">Instagram page</span>
-              </a>
+              </Link>
 
               {/* Facebook */}
-              <a
+              <Link
                 href="https://www.facebook.com/profile.php?id=61573540568212"
                 target="_blank"
-                className="text-white"
+                className="text-white transition-transform hover:scale-110"
+                aria-label="Facebook"
               >
                 <svg
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"
@@ -158,20 +175,21 @@ const Contact = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="sr-only">Facebook page</span>
-              </a>
+              </Link>
 
               {/* TikTok */}
-              <a
+              <Link
                 href="https://www.tiktok.com/@yywireless"
                 target="_blank"
-                className="text-white ms-5"
+                className="text-white transition-transform hover:scale-110"
+                aria-label="TikTok"
               >
                 <svg
-                  width="40px"
-                  height="40px"
+                  width="36px"
+                  height="36px"
                   viewBox="62.370000000000005 70.49 675.3000000000001 675.3000000000001"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-9 h-9 sm:w-11 sm:h-11 md:w-9 md:h-9"
                 >
                   <g fill="#ee1d52">
                     <path d="M196 498.32l1.64 4.63c-.21-.53-.81-2.15-1.64-4.63zM260.9 393.39c2.88-24.88 12.66-38.81 31.09-53.09 26.37-19.34 59.31-8.4 59.31-8.4V267a135.84 135.84 0 0 1 23.94 1.48V352s-32.93-10.94-59.3 8.41c-18.42 14.27-28.22 28.21-31.09 53.09-.09 13.51 2.34 31.17 13.53 46.44q-4.15-2.22-8.46-5.06c-24.65-17.27-29.14-43.18-29.02-61.49zM511.25 147c-18.14-20.74-25-41.68-27.48-56.39h22.82s-4.55 38.57 28.61 76.5l.46.51A132.76 132.76 0 0 1 511.25 147zM621.18 205.8v81.84s-29.12-1.19-50.67-6.91c-30.09-8-49.43-20.27-49.43-20.27s-13.36-8.75-14.44-9.36v169c0 9.41-2.47 32.91-10 52.51-9.83 25.64-25 42.47-27.79 45.91 0 0-18.45 22.75-51 38.07-29.34 13.82-55.1 13.47-62.8 13.82 0 0-44.53 1.84-84.6-25.33a169.63 169.63 0 0 1-24.16-20.26l.2.15c40.08 27.17 84.6 25.33 84.6 25.33 7.71-.35 33.47 0 62.8-13.82 32.52-15.32 51-38.07 51-38.07 2.76-3.44 18-20.27 27.79-45.92 7.51-19.59 10-43.1 10-52.51V231c1.08.62 14.43 9.37 14.43 9.37s19.35 12.28 49.44 20.27c21.56 5.72 50.67 6.91 50.67 6.91v-64.13c9.96 2.33 18.45 2.96 23.96 2.38z" />
@@ -211,17 +229,17 @@ const Contact = () => {
 
                   <path d="M119.51 620.36h93.71l-8.66 25.78H180v98.67h-30.13v-98.67h-30.36zm248.35 0v25.78h30.36v98.67h30.17v-98.67h24.52l8.66-25.78zm-134.25 29.38A14.6 14.6 0 1 0 219 635.15a14.59 14.59 0 0 0 14.61 14.59zM219 744.81h29.58v-84.75H219zM355 649h-34.6l-29.82 29.82v-58.36h-29.39l-.09 124.35h29.67v-32.4L300 704l28.8 40.77h31.72l-41.72-59.62zm283.77 36.17L674.94 649h-34.59l-29.83 29.82v-58.36h-29.38L581 744.81h29.68v-32.4L620 704l28.8 40.77h31.73zm-76.06 9.27c0 28.1-23.09 50.89-51.57 50.89s-51.57-22.79-51.57-50.89 23.09-50.89 51.57-50.89 51.57 22.8 51.57 50.91zm-26.27 0a25.3 25.3 0 1 0-25.3 25.3 25.3 25.3 0 0 0 25.3-25.28z" />
                 </svg>
-                <span className="sr-only">Twitter page</span>
-              </a>
+              </Link>
 
               {/* Linkedin */}
-              <a
+              <Link
                 href="https://www.linkedin.com/company/yywireless-bayshine"
                 target="_blank"
-                className="text-white ms-5"
+                className="text-white transition-transform hover:scale-110"
+                aria-label="LinkedIn"
               >
                 <svg
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"
@@ -229,18 +247,30 @@ const Contact = () => {
                 >
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
-                <span className="sr-only">LinkedIn</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Copyright text - centered and responsive */}
+      <div className="relative w-full text-center mt-6 mb-2">
+        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-normal uppercase">
+          © 2025 yywireless all rights reserved.
+        </span>
+      </div>
+
       {/* Footer SVG */}
-      <span className="text-xl mx-auto ml-[300px] md:text-2xl lg:text-xl font-normal uppercase mt-0 md:mt-0">
-        © 2025 yywireless all rights reserved.
-      </span>
-      <img src="/images/extraassets/footer.svg" alt="Footer decoration" />
+      <div className="w-full">
+        <Image
+          src="/images/extraassets/footer.svg"
+          alt="Footer decoration"
+          width={1920}
+          height={200}
+          className="w-full"
+          priority
+        />
+      </div>
     </div>
   );
 };

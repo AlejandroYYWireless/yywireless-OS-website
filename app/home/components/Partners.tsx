@@ -36,18 +36,18 @@ const Partners = () => {
         alt="Decorative top wave"
       />
 
-      {/* Heading - responsive text size */}
-      <div className="absolute top-0 inset-0 w-full">
+      {/* Heading - responsive text size - keeping original position */}
+      <div className="absolute top-0 w-full">
         <h1
-          className="uppercase text-5xl md:text-8xl lg:text-8xl mt-4
-                       drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
-                       text-[#8aeb6a] font-poppins text-center tracking-wider font-normal"
+          className="uppercase text-4xl sm:text-5xl md:text-7xl lg:text-8xl mt-2 sm:mt-4
+                     drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
+                     text-[#8aeb6a] font-poppins text-center tracking-wider font-normal"
         >
           Our Partners
         </h1>
       </div>
 
-      {/* Partners grid - responsive columns and spacing */}
+      {/* Partners grid - with staggered fade-in animation */}
       <div className="gap-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 place-items-center">
         {partners.map((partner, index) => (
           <div
@@ -58,7 +58,7 @@ const Partners = () => {
               src={partner.image}
               alt={partner.name}
               className={`${
-                partner.scale ? "scale-140" : ""
+                partner.scale ? "scale-[1.2]" : ""
               } w-[140px] sm:w-[180px] md:w-[200px] lg:w-[240px] h-auto object-contain`}
             />
           </div>
