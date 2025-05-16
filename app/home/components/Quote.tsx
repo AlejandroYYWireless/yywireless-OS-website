@@ -1,13 +1,13 @@
 const Quote = () => {
   return (
-    <div className="min-h-screen relative flex justify-center items-start pt-16 md:pt-24 lg:pt-[120px] px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[90vh] md:min-h-screen relative flex justify-center items-start pt-16 md:pt-24 lg:pt-[120px] px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4 items-start">
+        <div className="grid  grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4 items-start">
           {/* Quote section - full width on mobile, 2 columns on large screens */}
-          <div className="col-span-1 h-full lg:col-span-2 z-10 text-xl sm:text-2xl lg:text-3xl font-semibold flex flex-col">
+          <div className="col-span-1 h-full lg:col-span-2 z-10  font-semibold flex flex-col">
             {/* Quote with gradient background */}
-            <div className="h-full  text-right flex flex-col justify-between font-poppins  self-start p-4 py-2 uppercase  lg:text-4xl  rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
-              <p className="leading-relaxed italic">
+            <div className="h-full  text-right flex text-2xl md:text-2xl xl:text-4xl  flex-col justify-between font-poppins  self-start p-4 py-2 uppercase    rounded-0 text-white bg-gradient-to-br from-[#379C2A] to-[#8BC53E] shadow-lg font-bold">
+              <p className="leading-relaxed italic ">
                 &quot;YYWireless started as a small idea in my basement with
                 nothing but determination and a vision. Today, we&apos;ve grown
                 into something much bigger - but the foundation remains the

@@ -83,9 +83,9 @@ const Contact = () => {
 
   return (
     <div id="contact-us" className="flex flex-col min-h-full relative">
-      <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center pt-12">
+      <div className="grid grid-cols-1 font-montserrat md:grid-cols-2 h-full place-items-center md:pt-12">
         {/* Left column with image and copyright */}
-        <div className="flex justify-between h-[600px] w-full mb-14 flex-col items-center">
+        <div className="flex justify-between h-full md:h-[600px] w-full mb-14 flex-col items-center">
           <img
             src="/images/internal/buildingFront.jpg"
             alt="A photo of the YYWireless building"

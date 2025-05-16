@@ -3,7 +3,7 @@ import React from "react";
 
 const Impact = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-[70vh] md:min-h-screen">
       <div className="flex flex-col justify-center">
         {/* Background image */}
         <div className="absolute inset-0">
