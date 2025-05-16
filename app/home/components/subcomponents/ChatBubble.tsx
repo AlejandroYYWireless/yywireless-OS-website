@@ -5,44 +5,49 @@ import { motion } from "framer-motion";
 interface ChatBubbleProps {
   word: string;
   position?: "left" | "right";
-  offset?: string;
   timeOffset?: number;
-  horizontalPadding?: string; // New prop for horizontal padding
 }
 
 const ChatBubble = ({
   word,
   position = "left",
-  offset = "0px",
   timeOffset = 0,
-  horizontalPadding = "20px", // Default padding value
-}: ChatBubbleProps) => (
-  <motion.div
-    className={`text-white  font-montserrat font-normal px-4 py-2 bg-black/50 min-h-[75px] h-fit text-xl max-w-1/2 flex flex-col justify-center items-center rounded-3xl absolute`}
-    style={{
-      top: offset,
-      left: position === "left" ? horizontalPadding : "auto",
-      right: position === "right" ? horizontalPadding : "auto",
-    }}
-    transition={{ duration: 0.5, delay: timeOffset }}
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-  >
-    {word}
-    {/* Chat bubble tail */}
-    <svg
-      className={`absolute ${
-        position === "left"
-          ? "left-[-3px] -bottom-3 rotate-[35deg]"
-          : "rotate-[200deg] -bottom-1 right-[-5px]"
-      }`}
-      width="20"
-      height="20"
-      viewBox="0 0 10 10"
+}: ChatBubbleProps) => {
+  return (
+    <motion.div
+      className={`flex ${position === "left" ? "self-start" : "self-end"} 
+                w-full max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[50%]
+                my-3 sm:my-4 md:my-5`}
+      initial={{ opacity: 0, x: position === "left" ? -20 : 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: timeOffset }}
     >
-      <polygon points="0,0 10,0 5,10" fill="rgba(0,0,0,0.5)" />
-    </svg>
-  </motion.div>
-);
+      <div
+        className={`relative
+                text-white font-montserrat font-normal 
+                px-2 sm:px-3 md:px-4
+                py-1 sm:py-2 md:py-2.5
+                bg-black/50 
+                text-xs sm:text-sm md:text-lg lg:text-xl
+                flex flex-col justify-center items-center 
+                rounded-xl md:rounded-3xl`}
+      >
+        {word}
+        {/* Chat bubble tail */}
+        <svg
+          viewBox="0 0 10 10"
+          preserveAspectRatio="xMidYMid meet"
+          className={`w-3 h-3 md:w-4 md:h-4 absolute ${
+            position === "left"
+              ? "left-[-2px] -bottom-2 rotate-[35deg]"
+              : "rotate-[200deg] -bottom-1 right-[-3px]"
+          }`}
+        >
+          <polygon points="0,0 10,0 5,10" fill="rgba(0,0,0,0.5)" />
+        </svg>
+      </div>
+    </motion.div>
+  );
+};
 
 export default ChatBubble;

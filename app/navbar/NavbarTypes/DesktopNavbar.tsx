@@ -46,11 +46,13 @@ const DesktopNavbar = () => {
               width={60}
               height={60}
             />
-            <p className="text-4xl font-semibold">YYWireless</p>
+            <p className="text-3xl mt-2 2xl:text-4xl font-semibold">
+              YYWireless
+            </p>
           </Link>
 
           {/* standard links */}
-          <div className="flex items-center pt-4 text-2xl font-semibold justify-around h-24 w-[70vw]">
+          <div className="flex items-center pt-4 xl:text-xl 2xl:text-2xl font-semibold justify-around h-24 w-[70vw]">
             <Link
               href="/"
               className="uppercase text-shadow-lg"
@@ -86,13 +88,6 @@ const DesktopNavbar = () => {
             >
               Contact Us
             </a>
-            <Link
-              href="/"
-              className="uppercase flex gap-4 items-center text-shadow-lg"
-            >
-              <UserCircle className="text-lime-600 h-8 w-8" />
-              Login
-            </Link>
           </div>
         </div>
       </nav>
