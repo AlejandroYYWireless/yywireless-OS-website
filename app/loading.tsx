@@ -1,12 +1,12 @@
 import { Loader2 } from "lucide-react";
 import React from "react";
 
-const loading = () => {
+const Page = () => {
   return (
-    <div className="h-full w-full">
-      <Loader2 className="animate-spin" />
+    <div className="h-screen w-full flex justify-center items-center bg-black">
+      <Loader2 className="animate-spin h-14 w-14 text-white" />
     </div>
   );
 };
 
-export default loading;
+export default Page;

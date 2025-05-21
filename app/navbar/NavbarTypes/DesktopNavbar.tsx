@@ -52,12 +52,8 @@ const DesktopNavbar = () => {
 
           {/* standard links */}
           <div className="flex items-center pt-4 xl:text-xl 2xl:text-2xl font-semibold justify-around h-24 w-[70vw]">
-            <Link
-              href="/"
-              className="uppercase text-shadow-lg"
-              onClick={(e) => handleSmoothScroll(e, "our-story")}
-            >
-              Our Story
+            <Link href="/about-us" className="uppercase text-shadow-lg">
+              About Us
             </Link>
             <Link
               href="/"

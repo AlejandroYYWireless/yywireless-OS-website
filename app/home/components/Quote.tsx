@@ -67,7 +67,6 @@ const Quote = () => {
               <video
                 className="w-full h-auto relative z-10"
                 src="/videos/herovideo.mp4"
-                poster="/images/video-poster.jpg"
                 loop
                 autoPlay
                 muted
