@@ -21,62 +21,62 @@ const MeetTheTeam = () => {
   );
   const teamMembers = [
     {
-      url: "/images/internal/leaders/ivanxiao.JPG",
+      url: "/images/internal/leaders/ivanxiao.jpg",
       name: "Ivan Xiao",
       position: "C.E.O.",
     },
     {
-      url: "/images/internal/leaders/kittyvang.JPG",
+      url: "/images/internal/leaders/kittyvang.jpg",
       name: "Kitty Vang",
       position: "C.O.O.",
     },
     {
-      url: "/images/internal/leaders/missyjohnson.JPG",
+      url: "/images/internal/leaders/missyjohnson.jpg",
       name: "Missy Johnson",
       position: "Accounting & Office Manager",
     },
     {
-      url: "/images/internal/leaders/anthonybattillo.JPG",
+      url: "/images/internal/leaders/anthonybattillo.jpg",
       name: "Anthony Batillo",
       position: "Innovation Manager",
     },
     {
-      url: "/images/internal/leaders/maggiechen.JPG",
+      url: "/images/internal/leaders/maggiechen.jpg",
       name: "Maggie Chen",
       position: "Warehouse & Inventory Manager",
     },
     {
-      url: "/images/internal/leaders/melindamorrill.JPG",
+      url: "/images/internal/leaders/melindamorrill.jpg",
       name: "Melinda Morrill",
       position: "Shipping Manager",
     },
     {
-      url: "/images/internal/leaders/songgongbo.JPG",
+      url: "/images/internal/leaders/songgongbo.jpg",
       name: "Song GongBo",
       position: "Production Manager",
     },
     {
-      url: "/images/internal/leaders/frankyxiao.JPG",
+      url: "/images/internal/leaders/frankyxiao.jpg",
       name: "Franky Xiao",
       position: "Director of Repairs",
     },
     {
-      url: "/images/internal/leaders/nickkalianoff.JPG",
+      url: "/images/internal/leaders/nickkalianoff.jpg",
       name: "Nick Kalianoff",
       position: "Wholesale Manager",
     },
     {
-      url: "/images/internal/leaders/artishbhakta.JPG",
+      url: "/images/internal/leaders/artishbhakta.jpg",
       name: "Artish Bhakta",
       position: "E-Commerce Manager",
     },
     {
-      url: "/images/internal/leaders/lingqiu.JPG",
+      url: "/images/internal/leaders/lingqiu.jpg",
       name: "Ling Qiu",
       position: "Customer Service Manger",
     },
     {
-      url: "/images/internal/leaders/brianneschwarck.JPG",
+      url: "/images/internal/leaders/brianneschwarck.jpg",
       name: "Brianne Schwarck",
       position: "Human Resources Generalist",
     },
