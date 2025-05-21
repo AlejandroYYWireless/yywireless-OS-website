@@ -1,6 +1,6 @@
 const OurHistory = () => {
   return (
-    <div className="bg-[#1c1c1c] h-screen flex flex-col items-center pt-[170px]">
+    <div className="bg-[#1c1c1c] h-fit xl:h-screen flex flex-col items-center pt-[170px]">
       <h1
         className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
                        drop-shadow-[0px_0px_8px_rgba(138,253,106,0.7)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
@@ -9,7 +9,7 @@ const OurHistory = () => {
         Our history
       </h1>
       <p
-        className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 mb-4 sm:mt-6
+        className="text-lg sm:text-xl px-4 md:text-2xl lg:text-3xl mt-4 mb-4 sm:mt-6
                        drop-shadow-[0px_0px_8px_rgba(138,253,106,0.7)] sm:drop-shadow-[0px_0px_14px_rgba(138,253,106,0.8)]
                        text-[#b7eb6a] font-poppins tracking-wider font-semibold"
       >
