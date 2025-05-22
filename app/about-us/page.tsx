@@ -40,6 +40,11 @@ const Page = () => {
       </div>
       <div>
         <AboutUsTeamYY />
+        <img
+          className="w-full z-2"
+          src="/images/extraassets/footer.svg"
+          alt="Decorative top wave"
+        />
       </div>
     </div>
   );
