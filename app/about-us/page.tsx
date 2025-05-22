@@ -19,7 +19,7 @@ const Page = () => {
       <div className="relative">
         <WhoWeAre />
         <img
-          className="w-full z-2 absolute bottom-[-110px] sm:bottom-[-170px] md:bottom-[-180px] lg:bottom-[-270px] xl:bottom-[-300px] 2xl:bottom-[-320px]"
+          className="w-full z-2 absolute bottom-[-110px] sm:bottom-[-170px] md:bottom-[-180px] lg:bottom-[-270px] xl:bottom-[-300px] 2xl:bottom-[-400px]"
           src="/images/assets/whowearebottom.svg"
           alt="Decorative top wave"
         />
