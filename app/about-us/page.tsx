@@ -3,6 +3,7 @@ import MeetTheTeam from "./components/AboutUsHeader/MeetTheTeam";
 import OurHistory from "./components/AboutUsHeader/OurHistory";
 import WhoWeAre from "./components/AboutUsHeader/WhoWeAre";
 import WhyUsedMatters from "./components/AboutUsHeader/WhyUsedMatters";
+import AboutUsTeamYY from "./components/AboutUsTeamYY";
 
 const Page = () => {
   return (
@@ -36,6 +37,9 @@ const Page = () => {
       </div>
       <div>
         <WhyUsedMatters />
+      </div>
+      <div>
+        <AboutUsTeamYY />
       </div>
     </div>
   );
