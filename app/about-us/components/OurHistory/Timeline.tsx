@@ -1,4 +1,3 @@
-import { div, p } from "framer-motion/client";
 import { ChevronDown, ChevronUp, Quote } from "lucide-react";
 import React from "react";
 
@@ -50,7 +49,7 @@ const Timeline = () => {
   );
 
   return (
-    <div className="relative">
+    <div className="hidden relative xl:block">
       <div className="grid grid-cols-6 gap-6 ">
         <TimeLineTextBox
           year="2009"

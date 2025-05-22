@@ -1,3 +1,5 @@
+import MdTimeline from "../OurHistory/MdTimeline";
+import SmTimeline from "../OurHistory/SmTimeline";
 import Timeline from "../OurHistory/Timeline";
 
 const OurHistory = () => {
@@ -28,6 +30,8 @@ const OurHistory = () => {
       </div>
       <div className="mt-8">
         <Timeline />
+        <SmTimeline />
+        <MdTimeline />
       </div>
     </div>
   );
