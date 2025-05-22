@@ -53,39 +53,39 @@ const MdTimeline = () => {
         year="2009"
         eventNumber="1"
         text="Founded in a basement, a 1-man operation selling on Amazon, eBay & wholesale."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2009.jpg"}
       />
       <TimeLineTextBox
         year="2013"
         eventNumber="2"
         text="Moved to its first location, with 5 employees."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2013.png"}
         flip
       />
       <TimeLineTextBox
         year="2019"
         eventNumber="3"
         text="Moved to its second location, expanding to 25 employees."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2019.jpg"}
       />
       <TimeLineTextBox
         year="2021"
         eventNumber="4"
         text="Powered through COVID, moved to this warehouse, grew to 45 employees."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2021.jpg"}
         flip
       />
       <TimeLineTextBox
         year="2023"
         eventNumber="5"
         text="Operations expanded to 75 employees, with 6 department heads."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2023.jpg"}
       />
       <TimeLineTextBox
         year="2025"
         eventNumber="6"
         text="Over 100 employees, 10 departments, 9 managers, & growth rate up to 25%-30%."
-        img={"/images/internal/leaders/songgongbo.jpg"}
+        img={"/images/internal/history/2025.jpg"}
         flip
       />
     </div>
