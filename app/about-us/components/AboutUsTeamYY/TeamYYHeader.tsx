@@ -9,8 +9,8 @@ const TeamYYHeader = () => {
         Team YY
       </h1>
       <p className="text-white text-2xl font-montserrat max-w-2xl">
-        We're proud to spotlight the talent, passion, and personalities that
-        make us who we are
+        We&apos;re proud to spotlight the talent, passion, and personalities
+        that make us who we are
       </p>
     </div>
   );
