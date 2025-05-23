@@ -41,7 +41,7 @@ const Page = () => {
       <AboutUsTeamYY />
       <img
         className="w-full z-2"
-        src="/images/assets/aboutusfooter4.svg"
+        src="/images/assets/aboutusfooter.svg"
         alt="Decorative bottom lines"
       />
     </div>
