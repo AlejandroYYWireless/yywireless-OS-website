@@ -56,9 +56,8 @@ const DesktopNavbar = () => {
               About Us
             </Link>
             <Link
-              href="/"
+              href="/services"
               className="uppercase text-shadow-lg"
-              onClick={(e) => handleSmoothScroll(e, "our-service")}
             >
               Our Services
             </Link>
