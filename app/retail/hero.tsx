@@ -36,6 +36,12 @@ const Hero = () => {
             WHERE TECH MEETS TRUST
           </p>
         </div>
+        <div className="flex w-full items-center justify-center text-center">
+          <p className="mt-16 text-white text-lg italic max-w-xl">
+            Explore how YYWireless delivers trusted, tested devices to customers
+            across the world&apos;s top marketplaces.
+          </p>
+        </div>
       </div>
     </div>
   );
