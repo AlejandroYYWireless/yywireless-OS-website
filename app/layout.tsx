@@ -6,6 +6,7 @@ import {
   Montserrat,
   Poppins,
 } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "./navbar/navbar";
 import { Toaster } from "sonner";

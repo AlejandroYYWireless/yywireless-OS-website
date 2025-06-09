@@ -13,11 +13,13 @@ const Step3 = () => {
     text,
     title,
     header,
+    subtext,
   }: {
     img: string;
     text: string;
     title: string;
     header: string;
+    subtext?: string;
   }) => {
     return (
       <Dialog>
@@ -30,16 +32,41 @@ const Step3 = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white font-bold text-center px-4">{title}</p>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 flex flex-col text-white items-center justify-center z-10">
+              <p className="text-white font-bold text-xl font-montserrat text-center px-4">
+                {title}
+              </p>
+              {subtext && <p className="text-sm">{subtext}</p>}
             </div>
           </div>
         </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{header}</DialogTitle>
-          </DialogHeader>
-          <p>{text}</p>
+        <DialogContent
+          className="bg-black/95 border-lime-500 text-white max-w-2xl"
+          style={{
+            backgroundImage: `url(${img})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-70 rounded-xl"></div>
+          <div className="relative z-10">
+            <DialogHeader>
+              <DialogTitle
+                className="green-outline capitalize font-poppins 
+                          text-2xl text-2xl
+                          drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
+                          sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
+                          lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
+                          text-[#8aeb6a] mb-4"
+              >
+                {header}
+              </DialogTitle>
+            </DialogHeader>
+            <p className="text-white text-lg leading-relaxed font-poppins">
+              {text}
+            </p>
+          </div>
         </DialogContent>
       </Dialog>
     );
@@ -89,28 +116,30 @@ const Step3 = () => {
               />
               <ServicePopup
                 text="Professional carrier unlocking services for all major networks and device types."
-                img={"/images/services_page/unlock.png"}
+                img={"/images/services_page/metallock.png"}
                 header="Carrier Unlocking"
                 title="Carrier Unlocking"
               />
               <ServicePopup
                 text="High-volume device polishing and restoration services for enterprise clients."
-                img={"/images/services_page/polishing.png"}
+                img={"/images/services_page/metalrock.png"}
                 header="Device Polishing"
-                title="Device Polishing (High Volume)"
+                title="Device Polishing"
+                subtext="(High Volume)"
               />
             </div>
             {/* Bottom row - 2 items centered */}
             <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto justify-items-center">
               <ServicePopup
                 text="WISE certified hardware repair services for mobile devices and enterprise equipment."
-                img={"/images/services_page/hardware.png"}
+                img={"/images/services_page/metalphone.png"}
                 header="Hardware Repairs"
-                title="Hardware Repairs (WISE Certified)"
+                title="Hardware Repairs"
+                subtext="(WISE Certified)"
               />
               <ServicePopup
                 text="Mobile Device Management setup and ongoing support for enterprise environments."
-                img={"/images/services_page/mdm.png"}
+                img={"/images/services_page/metalmdm.png"}
                 header="MDM Setup & Support"
                 title="MDM Setup & Support"
               />
