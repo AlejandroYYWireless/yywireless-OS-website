@@ -20,19 +20,19 @@ const Hero = () => {
           <div className="flex flex-col p-4 bg-black/50">
             <h1
               className="green-outline uppercase font-poppins 
-                     text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-                     drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
-                     sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
-                     lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
-                     text-[#8aeb6a] font-bold"
+                      text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                      drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
+                      sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
+                      lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
+                      text-[#8aeb6a] font-bold"
             >
               enterprise services
             </h1>
 
             <p
               className="text-lime-500 font-poppins font-semibold italic text-center mt-2 sm:mt-3 md:mt-4 
-                      text-xs sm:text-base md:text-xl lg:text-2xl font-normal 
-                      px-1 sm:px-4 md:px-6 relative z-10"
+                        text-xs sm:text-base md:text-xl lg:text-2xl font-normal 
+                        px-1 sm:px-4 md:px-6 relative z-10"
             >
               Advanced technical capabilities tailored for business clients.{" "}
             </p>
