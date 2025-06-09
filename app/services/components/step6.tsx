@@ -25,7 +25,9 @@ const Step6 = () => {
           ))}
         </div>
 
-        <p className="text-gray-200 text-sm leading-relaxed">"{quote}"</p>
+        <p className="text-gray-200 text-sm leading-relaxed">
+          &quot;{quote}&quot;
+        </p>
       </div>
     );
   };
