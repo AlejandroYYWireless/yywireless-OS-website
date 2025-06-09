@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 import { Mail, Phone } from "lucide-react";
 
 const Step4 = () => {

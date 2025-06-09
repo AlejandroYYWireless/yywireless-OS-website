@@ -34,7 +34,7 @@ const Step3 = () => {
               <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
                 <div>
                   <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold uppercase mb-3 lg:mb-4">
-                    See what's in stock
+                    See what&apos;s in stock
                   </h2>
                   <p className="text-sm sm:text-base lg:text-lg xl:text-xl mb-4 lg:mb-6 leading-relaxed">
                     Browse our real-time inventory of devices, tested and

@@ -54,7 +54,7 @@ const Step3 = () => {
             <DialogHeader>
               <DialogTitle
                 className="green-outline capitalize font-poppins 
-                          text-2xl text-2xl
+                          text-2xl
                           drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
                           sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
                           lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 

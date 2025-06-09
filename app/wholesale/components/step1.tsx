@@ -55,10 +55,10 @@ const Step1 = () => {
 
           <p className="text-white text-lg lg:text-xl leading-relaxed max-w-2xl">
             At YYWireless, we do wholesale differently. With one of the
-            industry's largest inventories - 100,000+ devices always in stock -
-            we offer a full range of New, Certified Pre-Owned, Refurbished, and
-            Used smartphones from top brands like Apple and Samsung, from the
-            originals to the latest models.
+            industry&apos;s largest inventories - 100,000+ devices always in
+            stock - we offer a full range of New, Certified Pre-Owned,
+            Refurbished, and Used smartphones from top brands like Apple and
+            Samsung, from the originals to the latest models.
           </p>
         </div>
       </div>

@@ -45,8 +45,8 @@ const Step2 = () => {
             We strive to offer our wholesale partners top-quality service, by
             delivering competitive pricing, fast shipping, and sustainable tech
             solutions that help your business grow. When you work with us,
-            you're not just getting devices - you're gaining a partner committed
-            to your success.
+            you&apos;re not just getting devices - you&apos;re gaining a partner
+            committed to your success.
           </p>
 
           <h2 className="text-xl font-bold text-black flex items-start text-start mb-4">
