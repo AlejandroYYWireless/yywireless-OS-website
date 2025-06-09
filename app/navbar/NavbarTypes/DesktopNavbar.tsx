@@ -68,9 +68,8 @@ const DesktopNavbar = () => {
               Wholesale
             </Link>
             <Link
-              href="#"
+              href="/retail"
               className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-              onClick={(e) => handleSmoothScroll(e, "retail")}
             >
               Retail
             </Link>
