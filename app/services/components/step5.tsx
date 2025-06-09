@@ -12,8 +12,8 @@ const Step5 = () => {
           priority
         />
       </div>
-      <div className="relative z-10 flex items-center justify-center h-full px-4">
-        <h2 className="italic text-5xl font-bold text-white text-center max-w-2xl">
+      <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 md:px-8">
+        <h2 className="italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
           From batch polishing to enterprise MDM—YYWireless delivers
           industrial-scale services with boutique-level attention.
         </h2>
