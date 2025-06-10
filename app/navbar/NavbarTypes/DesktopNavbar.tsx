@@ -1,105 +1,89 @@
 "use client";
+
 import Image from "next/image";
-import React, { useCallback } from "react";
+import React, { useEffect, useState } from "react";
+import DesktopNavbarLinks from "../DesktopNavbarLinks";
 import Link from "next/link";
 
 const DesktopNavbar = () => {
-  // Smooth scroll handler function with type safety
-  const handleSmoothScroll = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-      e.preventDefault();
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        // Calculate offset to account for fixed navbar
-        const navbarHeight = 96; // Approximate height of your navbar (24px + padding)
-        const targetPosition =
-          targetElement.getBoundingClientRect().top +
-          window.pageYOffset -
-          navbarHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-      }
-    },
-    []
-  );
+  const [navState, setNavState] = useState<"visible" | "hidden">("visible");
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [showOverlay, setShowOverlay] = useState(false);
 
+  useEffect(() => {
+    let lastScroll = window.scrollY;
+    setIsAtTop(window.scrollY === 0);
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      // Check if at top of page
+      setIsAtTop(currentScroll === 0);
+
+      // Scrolling up - show with black background
+      if (currentScroll < lastScroll) {
+        setNavState("visible");
+      }
+      // Scrolling down - hide the navbar
+      else if (currentScroll > lastScroll) {
+        setNavState("hidden");
+        // Close any open menus when hiding navbar
+        setActiveMenu(null);
+        setShowOverlay(false);
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (showOverlay) {
+    console.log("for testing");
+  }
   return (
     <>
-      {/* Static navbar with margin on top */}
-      <nav className="fixed top-6 left-0 right-0 mx-auto max-w-7xl bg-stone-500/40 text-white z-50 rounded-lg">
-        <div className="flex justify-between items-center px-6 lg:px-8 h-20">
-          {/* Logo Section */}
+      {/* This code looks good and needs to remain untouched */}
+      <nav
+        className={`fixed top-0 left-0 p-2 w-full transition-all duration-300 z-50 ${
+          navState === "visible"
+            ? (isAtTop && !activeMenu ? "bg-transparent" : "bg-black") +
+              " text-white"
+            : "-translate-y-full bg-transparent text-white"
+        }`}
+      >
+        {/* Changed to grid layout for proper centering */}
+        <div className="grid grid-cols-3 items-center text-sm">
+          {/* Logo - Left */}
           <Link
             href={"/"}
-            className="flex items-center gap-2 cursor-pointer flex-shrink-0"
+            className="flex items-center gap-2 cursor-pointer justify-self-start"
           >
             <Image
-              src={"/images/internal/YYWirelessSmallLight.svg"}
+              src={"/images/internal/YYWirelessSmallDark.svg"}
               alt="YYWireless Company Logo, an image of a circle with two Y's in it."
               className="shrink-0 cursor-pointer"
-              width={50}
-              height={50}
+              width={65}
+              height={65}
             />
-            <p className="text-2xl lg:text-3xl 2xl:text-4xl font-semibold whitespace-nowrap">
-              YYWireless
-            </p>
+            <p className="text-3xl">YYWireless</p>
           </Link>
 
-          {/* Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 2xl:space-x-10 text-base xl:text-lg 2xl:text-xl font-semibold">
-            <Link
-              href="/about-us"
-              className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/services"
-              className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-            >
-              Our Services
-            </Link>
-            <Link
-              href="/wholesale"
-              className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-            >
-              Wholesale
-            </Link>
-            <Link
-              href="/retail"
-              className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-            >
-              Retail
-            </Link>
-            <a
-              href="#contact-us"
-              className="uppercase text-shadow-lg hover:text-[#8aeb6a] transition-colors whitespace-nowrap"
-              onClick={(e) => handleSmoothScroll(e, "contact-us")}
-            >
-              Contact Us
-            </a>
+          {/* Navigation Links - Center */}
+          <div className="justify-self-center">
+            <DesktopNavbarLinks
+              activeMenu={activeMenu}
+              setActiveMenu={setActiveMenu}
+              setShowOverlay={setShowOverlay}
+            />
           </div>
 
-          {/* Mobile Menu Button (for future mobile implementation) */}
-          <div className="lg:hidden">
-            <button className="text-white p-2">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+          {/* Empty space - Right (or remove this div entirely if not needed) */}
+          <div className="justify-self-end">{/* Empty for now */}</div>
         </div>
       </nav>
     </>
