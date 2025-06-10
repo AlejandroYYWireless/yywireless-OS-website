@@ -157,7 +157,7 @@ const Step8 = () => {
             Don&apos;t see your question?
             <br />
             Reach out to us at:{" "}
-            <span className="text-lime-500">cs@xywireless.com</span>
+            <span className="text-lime-500">cs@yywireless.com</span>
           </p>
         </div>
       </div>
