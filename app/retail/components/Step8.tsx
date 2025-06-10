@@ -65,7 +65,7 @@ const Step8 = () => {
             {/* Question 3 */}
             <div className="flex flex-col gap-2">
               <p className="text-lime-500 font-medium">
-                3. What's the difference between Fulfilled by Amazon and
+                3. What&apos;s the difference between Fulfilled by Amazon and
                 Fulfilled by Store?
               </p>
               <p className="text-white text-sm leading-relaxed">
@@ -87,7 +87,7 @@ const Step8 = () => {
                 We sell certified pre-owned devices, clearly labeled by
                 condition (Like New, Very Good, Good). Every phone is
                 professionally tested, cleaned, and packaged for resale—no
-                "flipping" or unverified returns.
+                &quot;flipping&quot; or unverified returns.
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@ const Step8 = () => {
             {/* Question 6 */}
             <div className="flex flex-col gap-2">
               <p className="text-lime-500 font-medium">
-                6. What's your return policy?
+                6. What&apos;s your return policy?
               </p>
               <p className="text-white text-sm leading-relaxed">
                 Return windows are set by each platform:
@@ -143,7 +143,7 @@ const Step8 = () => {
                 8. Do you offer wholesale or bulk discounts?
               </p>
               <p className="text-white text-sm leading-relaxed">
-                Yes! If you're buying for resale or bulk use, visit our
+                Yes! If you&apos;re buying for resale or bulk use, visit our
                 [Wholesale page] or contact our sales team directly. Retail
                 marketplace orders are not eligible for wholesale pricing.
               </p>
@@ -154,7 +154,7 @@ const Step8 = () => {
         {/* Footer Contact */}
         <div className="text-center mt-12 pt-6">
           <p className="text-white text-sm">
-            Don't see your question?
+            Don&apos;t see your question?
             <br />
             Reach out to us at:{" "}
             <span className="text-lime-500">cs@xywireless.com</span>
