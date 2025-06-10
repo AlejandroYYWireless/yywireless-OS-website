@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DesktopNavbarLinks from "../DesktopNavbarLinks";
 import Link from "next/link";
+import { navigation } from "@/public/data/navigation";
 
 const DesktopNavbar = () => {
   const [navState, setNavState] = useState<"visible" | "hidden">("visible");
@@ -45,6 +46,10 @@ const DesktopNavbar = () => {
   if (showOverlay) {
     console.log("for testing");
   }
+
+  // Get navigation items from the first object
+  const navItems = navigation[0];
+
   return (
     <>
       {/* This code looks good and needs to remain untouched */}
@@ -74,12 +79,16 @@ const DesktopNavbar = () => {
           </Link>
 
           {/* Navigation Links - Center */}
-          <div className="justify-self-center">
-            <DesktopNavbarLinks
-              activeMenu={activeMenu}
-              setActiveMenu={setActiveMenu}
-              setShowOverlay={setShowOverlay}
-            />
+          <div className="justify-self-center flex gap-8">
+            {Object.entries(navItems).map(([key, item]) => (
+              <Link
+                key={key}
+                href={item.href}
+                className="text-white hover:text-[#8aeb6a] transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* Empty space - Right (or remove this div entirely if not needed) */}

@@ -54,8 +54,9 @@ const MobileNavbar = () => {
       <nav
         className={`fixed left-0 p-2 w-full transition-all duration-300 z-50 ${
           navState === "visible"
-            ? (isAtTop && !shouldShowBlackBg ? "bg-transparent" : "bg-black") +
-              " text-white"
+            ? (isAtTop && !shouldShowBlackBg
+                ? "bg-transparent"
+                : "bg-[#1C1C1C]") + " text-white"
             : "-translate-y-full bg-transparent text-white"
         }`}
       >

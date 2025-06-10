@@ -7,7 +7,7 @@ import Quote from "./home/components/Quote";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden+">
       <Hero />
       <Quote />
       <Certifications />

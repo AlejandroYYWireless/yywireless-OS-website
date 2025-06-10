@@ -3,9 +3,13 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useMobileNavStore } from "./useMobileNavStore";
+import { navigation } from "@/public/data/navigation";
 
 const MobileNavCurtain = () => {
   const navOpen = useMobileNavStore((store) => store.navOpen);
+
+  // Get navigation items from the first object
+  const navItems = navigation[0];
 
   return (
     <motion.div
@@ -27,13 +31,18 @@ const MobileNavCurtain = () => {
         }}
       >
         <div>
-          <Link
-            href={"/about-us"}
-            className="border-t group hover:bg-[#1e1a36] transition-colors border-b border-gray-700 justify-between flex items-center text-white text-3xl p-2"
-          >
-            About Us
-            <ArrowRight className="group-hover:-translate-x-[-10px] transition-all text-white text-3xl mr-2" />
-          </Link>
+          {Object.entries(navItems).map(([key, item], index) => (
+            <Link
+              key={key}
+              href={item.href}
+              className={`border-t group hover:bg-[#1e1a36] transition-colors ${
+                index === Object.keys(navItems).length - 1 ? "border-b" : ""
+              } border-gray-700 justify-between flex items-center text-white text-3xl p-2`}
+            >
+              {item.label}
+              <ArrowRight className="group-hover:-translate-x-[-10px] transition-all text-white text-3xl mr-2" />
+            </Link>
+          ))}
         </div>
         <div className="flex flex-col space-y-2">
           <button
