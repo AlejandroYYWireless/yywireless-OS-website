@@ -9,6 +9,10 @@ export const navigation = [
       href: "/about-us",
       label: "About Us",
     },
+    services: {
+      href: "/services",
+      label: "Services",
+    },
     "contact-us": {
       href: "/contact-us",
       label: "Contact Us",
