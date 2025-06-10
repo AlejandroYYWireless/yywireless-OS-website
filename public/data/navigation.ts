@@ -1,7 +1,7 @@
 export const navigation = [
   {
     home: {
-      href: "/home",
+      href: "/",
       label: "Home",
     },
 

@@ -7,13 +7,18 @@ import { navigation } from "@/public/data/navigation";
 
 const MobileNavCurtain = () => {
   const navOpen = useMobileNavStore((store) => store.navOpen);
+  const setNavOpen = useMobileNavStore((store) => store.setNavOpen);
 
   // Get navigation items from the first object
   const navItems = navigation[0];
 
+  const handleLinkClick = () => {
+    setNavOpen(false);
+  };
+
   return (
     <motion.div
-      className="fixed top-[70px] right-0 h-screen bg-[#1C1C1C]"
+      className="fixed top-[68px] right-0 h-screen bg-[#1C1C1C]"
       initial={{ width: 0 }}
       animate={navOpen ? { width: "100%" } : { width: 0 }}
       transition={{
@@ -35,28 +40,15 @@ const MobileNavCurtain = () => {
             <Link
               key={key}
               href={item.href}
+              onClick={handleLinkClick}
               className={`border-t group hover:bg-[#1e1a36] transition-colors ${
                 index === Object.keys(navItems).length - 1 ? "border-b" : ""
-              } border-gray-700 justify-between flex items-center text-white text-3xl p-2`}
+              } border-lime-700/50 justify-between flex items-center text-white text-3xl p-2`}
             >
               {item.label}
               <ArrowRight className="group-hover:-translate-x-[-10px] transition-all text-white text-3xl mr-2" />
             </Link>
           ))}
-        </div>
-        <div className="flex flex-col space-y-2">
-          <button
-            aria-label="Log in button"
-            className="uppercase cursor-pointer hover:bg-[#1e1a36]  bg-[#1C1C1C] border-2 border-stone-700 text-white text-sm rounded-none h-16"
-          >
-            Log in
-          </button>
-          <button
-            aria-label="Contact us button"
-            className="uppercase cursor-pointer hover:bg-slate-50 bg-white text-black text-sm border-2 border-white rounded-none h-16"
-          >
-            Contact Us
-          </button>
         </div>
       </motion.div>
     </motion.div>
