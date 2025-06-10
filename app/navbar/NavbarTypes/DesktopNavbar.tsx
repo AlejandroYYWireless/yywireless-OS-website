@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import DesktopNavbarLinks from "../DesktopNavbarLinks";
 import Link from "next/link";
 import { navigation } from "@/public/data/navigation";
 
