@@ -35,10 +35,12 @@ const Page = () => {
       <div>
         <MeetTheTeam />
       </div>
-      <div>
-        <WhyUsedMatters />
-      </div>
+      <WhyUsedMatters />
+
       <AboutUsTeamYY />
+      <p className="z-10 bg-[#1c1c1c] text-muted-foreground uppercase text-xs">
+        ©2025 YYWireless all rights reserved
+      </p>
       <img
         className="w-full z-2"
         src="/images/assets/aboutusfooter.svg"

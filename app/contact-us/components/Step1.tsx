@@ -32,8 +32,24 @@ const ContactPage = () => {
     },
     {
       title: "CAREER",
-      description:
-        "Interested in joining the YYWireless team? Reach out here with hiring, HR, or recruiting-related questions. To see all our current openings for work, you can check out our Indeed page HERE.",
+      description: (
+        <>
+          Interested in joining the YYWireless team? Reach out here with hiring,
+          HR, or recruiting-related questions. To see all our current openings
+          for work, you can check out our{" "}
+          <span className="italic text-lime-500 font-bold">Indeed page</span>{" "}
+          <a
+            href="https://www.indeed.com/cmp/Iwireless-Dealer-Store-1/jobs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white underline font-bold transition-colors duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            HERE
+          </a>
+          .
+        </>
+      ),
     },
     {
       title: "MARKETING",
@@ -63,7 +79,7 @@ const ContactPage = () => {
   const FormDialog = ({
     contactItem,
   }: {
-    contactItem: { title: string; description: string };
+    contactItem: { title: string; description: string | React.ReactNode };
   }) => (
     <Dialog>
       <DialogTrigger asChild>
@@ -71,9 +87,9 @@ const ContactPage = () => {
           <button className="w-full cursor-pointer max-w-[240px] h-12 bg-stone-500 rounded-none text-white font-bold text-base uppercase tracking-tight transition-colors duration-200">
             {contactItem.title}
           </button>
-          <p className="text-lime-600 text-xs text-center max-w-[240px] leading-relaxed group-hover:text-lime-500 transition-colors duration-200">
+          <div className="text-lime-600 text-xs text-center max-w-[240px] leading-relaxed group-hover:text-lime-500 transition-colors duration-200">
             {contactItem.description}
-          </p>
+          </div>
         </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md md:max-w-lg">
@@ -122,7 +138,7 @@ const ContactPage = () => {
   );
 
   return (
-    <div className="min-h-screen py-6 bg-[#1c1c1c] relative">
+    <div className=" min-h-screen py-6 bg-[#1c1c1c] relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
@@ -161,17 +177,10 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl w-full mb-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl w-full mb-8">
           {contactItems.map((item, index) => (
             <FormDialog key={index} contactItem={item} />
           ))}
-        </div>
-
-        {/* Copyright */}
-        <div className="text-center mt-6">
-          <span className="text-xs font-normal uppercase text-white">
-            © 2025 yywireless all rights reserved.
-          </span>
         </div>
       </div>
     </div>

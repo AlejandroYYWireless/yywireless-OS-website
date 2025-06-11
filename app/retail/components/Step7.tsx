@@ -18,7 +18,7 @@ const Step7 = () => {
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div className="max-w-2xl mb-8 lg:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl uppercase tracking-wide mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide mb-4 sm:mb-6">
             Powered by Platforms
           </h2>
           <p className="text-sm sm:text-base text-gray-600 leading-relaxed">

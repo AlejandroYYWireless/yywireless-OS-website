@@ -2,7 +2,7 @@ import React from "react";
 
 const Step8 = () => {
   return (
-    <div className="relative min-h-screen py-8 bg-[#1c1c1c]">
+    <div className="relative min-h-screen z-[51] py-8 bg-[#1c1c1c]">
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-cover bg-center opacity-50"
