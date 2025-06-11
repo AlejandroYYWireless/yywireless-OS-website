@@ -92,14 +92,14 @@ const Step3 = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 py-12">
         <div className="text-center mb-8">
           <h1
-            className="green-outline uppercase font-poppins 
+            className="green-outline capitalize font-poppins 
                        text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
                        drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
                        sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
                        lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
                        text-[#8aeb6a]"
           >
-            enterprise services
+            Service highlights
           </h1>
         </div>
 
@@ -156,25 +156,25 @@ const Step3 = () => {
             />
             <ServicePopup
               text="Professional carrier unlocking services for all major networks and device types."
-              img={"/images/services_page/unlock.png"}
+              img={"/images/services_page/metallock.png"}
               header="Carrier Unlocking"
               title="Carrier Unlocking"
             />
             <ServicePopup
               text="High-volume device polishing and restoration services for enterprise clients."
-              img={"/images/services_page/polishing.png"}
+              img={"/images/services_page/metalrock.png"}
               header="Device Polishing"
               title="Device Polishing (High Volume)"
             />
             <ServicePopup
               text="WISE certified hardware repair services for mobile devices and enterprise equipment."
-              img={"/images/services_page/hardware.png"}
+              img={"/images/services_page/metalphone.png"}
               header="Hardware Repairs"
               title="Hardware Repairs (WISE Certified)"
             />
             <ServicePopup
               text="Mobile Device Management setup and ongoing support for enterprise environments."
-              img={"/images/services_page/mdm.png"}
+              img={"/images/services_page/metalmdm.png"}
               header="MDM Setup & Support"
               title="MDM Setup & Support"
             />

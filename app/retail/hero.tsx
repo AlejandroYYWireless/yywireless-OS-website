@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative lg:h-[fit] pb-12 sm:pb-14 xl:pb-12 2xl:pb-4 2xl:h-[100svh] w-full overflow-hidden">
+    <div className="relative lg:h-[fit] pb-[200px] 2xl:h-[100svh] w-full overflow-hidden">
       <div className="absolute inset-0 -top-[108px] z-0">
         <Image
           src={"/images/retail_page/retail.png"}

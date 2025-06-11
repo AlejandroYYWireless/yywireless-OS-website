@@ -6,7 +6,14 @@ import Step8 from "./components/Step8";
 const Page = () => {
   return (
     <div>
-      <Hero />
+      <div className="relative">
+        <Hero />
+        <img
+          className="w-full z-2 absolute hidden sm:block bottom-[40px] sm:bottom-[-59px] lg:bottom-[-50px] xl:bottom-[-50px]"
+          src="/images/assets/upswoop.svg"
+          alt="Decorative bottom lines"
+        />
+      </div>
       <Step7 />
       <Step8 />
     </div>

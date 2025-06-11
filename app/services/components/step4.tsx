@@ -3,7 +3,7 @@ import React from "react";
 
 const Step4 = () => {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="flex pb-[200px] md:pb-[150px] flex-col lg:flex-row min-h-screen">
       {/* Left section - Image */}
       <div className="relative w-full lg:w-1/2 h-64 lg:h-screen">
         <Image
@@ -17,7 +17,7 @@ const Step4 = () => {
 
       {/* Right section - Content */}
       <div className="relative w-full lg:w-1/2 h-auto lg:h-screen bg-white">
-        <div className="flex flex-col justify-center h-full p-6 lg:p-12">
+        <div className="flex flex-col justify-start h-full p-6 lg:p-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-6 lg:mb-8">
             Software Repair Services
           </h1>
@@ -87,13 +87,6 @@ const Step4 = () => {
               </li>
             </ul>
           </div>
-        </div>
-
-        {/* Green curved section at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 lg:h-32">
-          <svg viewBox="0 0 800 200" className="w-full h-full">
-            <path d="M0,200 Q400,0 800,200 L800,200 L0,200 Z" fill="#8aeb6a" />
-          </svg>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const Step1 = () => {
         </div>
 
         {/* Desktop: Original layout */}
-        <div className="hidden lg:block relative h-screen w-[600px]">
+        <div className="hidden lg:block relative z-20 h-screen w-[600px]">
           <Image
             src={"/images/wholesale_page/booth.png"}
             alt="Services illustration"
@@ -48,8 +48,8 @@ const Step1 = () => {
               src={"/images/internal/YYWirelessSmallLight.svg"}
               alt="YYWireless Company Logo, an image of a circle with two Y's in it."
               className="shrink-0 cursor-pointer"
-              width={60}
-              height={60}
+              width={90}
+              height={90}
               sizes="(max-width: 768px) 60px, 80px"
             />
           </div>

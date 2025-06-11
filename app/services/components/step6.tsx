@@ -9,7 +9,7 @@ const Step6 = () => {
     quote: string;
   }) => {
     return (
-      <div className="bg-stone-700 backdrop-blur-sm rounded-lg p-6 max-w-sm">
+      <div className="bg-stone-600 backdrop-blur-sm rounded-2xl p-6 max-w-sm">
         <h3 className="text-white font-bold text-lg mb-2">{name}</h3>
 
         {/* 5 stars */}
@@ -33,7 +33,7 @@ const Step6 = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative pt-[50px]  sm:pt-[200px] md:pt-[150px] xl:pt-[50px] min-h-screen w-full overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -45,18 +45,18 @@ const Step6 = () => {
         />
       </div>
 
-      {/* Green curved top section */}
-      <div className="absolute top-0 left-0 right-0 h-20 lg:h-32 z-5">
-        <svg viewBox="0 0 800 200" className="w-full h-full">
-          <path d="M0,0 Q400,200 800,0 L800,0 L0,0 Z" fill="#65a30d" />
-        </svg>
-      </div>
-
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
+      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen  mb-10 xl:mb-20">
         {/* Left section - Title and Benefits */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 lg:p-12">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-lime-500 mb-8 lg:mb-12">
+          <h1
+            className="green-outline mb-10 xl:mb-20  font-poppins 
+                       text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                       drop-shadow-[0px_0px_4px_rgba(138,253,106,0.8)] 
+                       sm:drop-shadow-[0px_0px_8px_rgba(138,253,106,0.6)]
+                       lg:drop-shadow-[0px_0px_14px_rgba(138,253,106,.5)] 
+                       text-[#8aeb6a]"
+          >
             Why Partner With YY
           </h1>
 

@@ -27,7 +27,7 @@ const Step4 = () => {
 
         {/* Profile Image */}
         <div className="mb-3">
-          <div className="w-20 h-20 mx-auto bg-white p-1 rounded-lg">
+          <div className="w-40 h-40 mx-auto bg-white p-1 rounded-lg">
             <img
               src={image}
               alt={name}
@@ -42,7 +42,7 @@ const Step4 = () => {
         </div>
 
         {/* Description Text */}
-        <div className="text-xs leading-relaxed mb-3 font-medium">{text}</div>
+        <div className="text-md  mb-3 font-medium">{text}</div>
 
         {/* QR Code */}
         <div className="mb-3">
@@ -74,7 +74,7 @@ const Step4 = () => {
     return (
       <div className="relative w-full max-w-[300px] mx-auto">
         {/* Main Card */}
-        <div className="bg-[#1c1c1c] p-4 rounded-lg text-white shadow-lg">
+        <div className="bg-[#1c1c1c] p-4 rounded-lg text-white">
           <img
             src="/images/wholesale_page/wsmwa.png"
             alt=""
@@ -82,20 +82,20 @@ const Step4 = () => {
           />
           {/* Title */}
           <div className="text-center mb-2">
-            <h3 className="text-sm font-bold uppercase">
+            <h3 className="text-lg font-bold uppercase">
               CONTACT THE TEAM HERE
             </h3>
-            <p className="text-xs">FOR ALL GENERAL SALES QUESTIONS</p>
+            <p className="text-md">FOR ALL GENERAL SALES QUESTIONS</p>
           </div>
 
           {/* Divider */}
           <div className="text-center mb-2">
-            <span className="text-[#8BC53E] font-bold text-sm">or</span>
+            <span className="text-[#8BC53E] font-bold text-lg">or</span>
           </div>
 
           {/* Bottom Text */}
           <div className="text-center">
-            <h4 className="text-sm font-bold uppercase">
+            <h4 className="text-xl font-bold uppercase">
               GET OUR WHOLESALE DEALS FIRST BY EMAIL
             </h4>
           </div>
@@ -105,7 +105,10 @@ const Step4 = () => {
   };
 
   return (
-    <div className="bg-[#1c1c1c] min-h-screen p-4 sm:p-6">
+    <div
+      className="bg-[#1c1c1c] 
+     p-4 sm:p-6"
+    >
       <h1
         className="green-outline uppercase font-poppins 
                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
@@ -122,7 +125,7 @@ const Step4 = () => {
         {/* Desktop Layout - Hidden on mobile */}
         <div className="hidden lg:flex items-center justify-center gap-6">
           {/* Left Cards */}
-          <div className="flex gap-4">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <SalesRepCard
               title="WHOLESALE MANAGER"
               image="/images/wholesale_page/nick.jpeg"
@@ -147,7 +150,7 @@ const Step4 = () => {
           <MiddleCard />
 
           {/* Right Cards */}
-          <div className="flex gap-4">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/carlos.jpeg"

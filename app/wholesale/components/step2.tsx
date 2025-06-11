@@ -16,7 +16,7 @@ const Step2 = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative min-h-screen w-full mt-[200px] md:pb-[140px]">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
