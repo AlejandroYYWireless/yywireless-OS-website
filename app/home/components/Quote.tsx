@@ -67,12 +67,6 @@ const Quote = () => {
               <iframe
                 className="w-full md:min-h-[400px] relative z-10"
                 src="https://www.youtube.com/embed/jAF9P7glYkE?autoplay=1&mute=1&loop=1&playlist=jAF9P7glYkE&controls=1"
-                loop
-                autoPlay    
-                muted
-                playsInline
-                controls
-                preload="auto"
                 onLoadedData={handleVideoLoad}
               />
             </div>
