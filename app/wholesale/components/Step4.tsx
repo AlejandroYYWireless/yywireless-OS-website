@@ -72,7 +72,7 @@ const Step4 = () => {
 
   const MiddleCard = () => {
     return (
-      <div className="relative w-full max-w-[300px] mx-auto">
+      <div className="relative w-full max-w-[300px] ">
         {/* Main Card */}
         <div className="bg-[#1c1c1c] p-4 rounded-lg text-white">
           <img
@@ -123,9 +123,9 @@ const Step4 = () => {
       {/* Cards Layout */}
       <div className="mt-8 lg:mt-12">
         {/* Desktop Layout - Hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center gap-6">
+        <div className="hidden lg:flex items-center place-content-center place-items-center justify-center gap-6">
           {/* Left Cards */}
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 place-content-center">
             <SalesRepCard
               title="WHOLESALE MANAGER"
               image="/images/wholesale_page/nick.jpeg"
@@ -135,6 +135,13 @@ const Step4 = () => {
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
+          </div>
+
+          {/* Middle Card */}
+          <MiddleCard />
+
+          {/* Right Cards */}
+          <div className="grid grid-cols-1  gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/luan.jpeg"
@@ -144,14 +151,7 @@ const Step4 = () => {
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
-          </div>
-
-          {/* Middle Card */}
-          <MiddleCard />
-
-          {/* Right Cards */}
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-            <SalesRepCard
+            {/* <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/carlos.jpeg"
               name="Carlos Smith"
@@ -168,7 +168,7 @@ const Step4 = () => {
               waqr="/images/wholesale_page/starrwa.jpg"
               email="starr@yywireless.com"
               phonenumber="+1 515 305 - 8272"
-            />
+            /> */}
           </div>
         </div>
 
@@ -185,15 +185,6 @@ const Step4 = () => {
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
-            <SalesRepCard
-              title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/luan.jpeg"
-              name="Luan Pham"
-              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
-              waqr="/images/wholesale_page/nickwa.jpg"
-              email="luan@yywireless.com"
-              phonenumber="+1 515 822 - 0964"
-            />
           </div>
 
           {/* Middle Card - Full width */}
@@ -205,21 +196,12 @@ const Step4 = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/carlos.jpeg"
-              name="Carlos Smith"
-              text="A longtime collaborator and company insider, Carlos brings experience, insight, and solid support to every sale."
-              waqr="/images/wholesale_page/carloswa.jpg"
-              email="carlos@yywireless.com"
-              phonenumber="+1 515 305 - 8297"
-            />
-            <SalesRepCard
-              title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/starr.jpg"
-              name="STARR HOLCOMB"
-              text="From warehouse to sales floor, Starr's drive and fresh perspective make her a rising contributor on our team."
-              waqr="/images/wholesale_page/starrwa.jpg"
-              email="starr@yywireless.com"
-              phonenumber="+1 515 305 - 8272"
+              image="/images/wholesale_page/luan.jpeg"
+              name="Luan Pham"
+              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              waqr="/images/wholesale_page/nickwa.jpg"
+              email="luan@yywireless.com"
+              phonenumber="+1 515 822 - 0964"
             />
           </div>
         </div>

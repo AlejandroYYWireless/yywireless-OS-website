@@ -65,19 +65,15 @@ const MeetTheTeam = () => {
       name: "Nick Kalianoff",
       position: "Wholesale Manager",
     },
-    {
-      url: "/images/internal/leaders/artishbhakta.jpg",
-      name: "Artish Bhakta",
-      position: "E-Commerce Manager",
-    },
+
     {
       url: "/images/internal/leaders/lingqiu.jpg",
       name: "Ling Qiu",
-      position: "Customer Service Manger",
+      position: "E-Commerce Manager",
     },
     {
-      url: "/images/internal/leaders/brianneschwarck.jpg",
-      name: "Brianne Schwarck",
+      url: "/images/internal/leaders/kristin.png",
+      name: "Kristin Vrieze",
       position: "Human Resources Generalist",
     },
   ];
