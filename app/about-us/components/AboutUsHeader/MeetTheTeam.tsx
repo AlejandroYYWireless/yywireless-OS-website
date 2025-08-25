@@ -74,7 +74,7 @@ const MeetTheTeam = () => {
     {
       url: "/images/internal/leaders/kristin.png",
       name: "Kristin Vrieze",
-      position: "Human Resources Generalist",
+      position: "HR Manager",
     },
   ];
   return (
