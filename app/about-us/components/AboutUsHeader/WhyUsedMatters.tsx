@@ -62,7 +62,7 @@ const WhyUsedMatters = () => {
 
       {/* Stats footer */}
       <div className="flex flex-col sm:flex-row flex-wrap justify-around w-full bg-gradient-to-br from-[#379C2A] to-[#8BC53E] p-6 md:p-8 lg:p-12 shadow-lg gap-8 sm:gap-4">
-        <WYMFooterElement header="2006" value="Year founded" />
+        <WYMFooterElement header="2009" value="Year founded" />
         <WYMFooterElement header="100+" value="Numbers of employees" />
         <WYMFooterElement header="53+" value="Countries, global reach" />
         <div className="flex flex-col text-center sm:text-start mb-4 sm:mb-0">
