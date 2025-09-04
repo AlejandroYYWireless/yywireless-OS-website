@@ -16,7 +16,7 @@ const AboutUsHeaderText = () => {
 
         {/* Established Date */}
         <p className="text-white text-xl sm:text-2xl font-bold drop-shadow-[0px_0px_14px_rgba(255,255,255,1)] mb-6 sm:mb-8">
-          EST. 2006
+          EST. 2009
         </p>
 
         {/* Description Box */}
