@@ -157,7 +157,7 @@ const Step4 = () => {
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/blaik.png"
               name="Blaik Woellhof"
-              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures  always feel supported and confident."
+              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures customers always feel supported and confident."
               waqr="/images/wholesale_page/blaikwa.png"
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8272"
@@ -211,7 +211,7 @@ const Step4 = () => {
               name="Blaik Woellhof"
               waqr="/images/wholesale_page/blaikwa.png"
               email="blaik@yywireless.com"
-              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures  always feel supported and confident."
+              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures customers always feel supported and confident."
               phonenumber="+1 515 305 - 8272"
             />
             <SalesRepCard
