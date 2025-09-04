@@ -157,7 +157,7 @@ const Step4 = () => {
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/blaik.png"
               name="Blaik Woellhof"
-              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures  always feel supported and confident."
               waqr="/images/wholesale_page/blaikwa.png"
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8272"
@@ -166,7 +166,7 @@ const Step4 = () => {
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/karlaa.png"
               name="Karla Contreras"
-              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              text="With a strong eye for detail and a client-first approach, Karla consistently delivers smooth transactions and builds lasting relationships across the board."
               waqr="/images/wholesale_page/karlawa.png"
               email="karla@yywireless.com"
               phonenumber="+1 515 305 - 8292"
@@ -211,7 +211,7 @@ const Step4 = () => {
               name="Blaik Woellhof"
               waqr="/images/wholesale_page/blaikwa.png"
               email="blaik@yywireless.com"
-              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures customers always feel supported and confident."
+              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures  always feel supported and confident."
               phonenumber="+1 515 305 - 8272"
             />
             <SalesRepCard
