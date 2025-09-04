@@ -59,7 +59,9 @@ const Step4 = () => {
         <div className="space-y-1 text-xs">
           <div className="flex items-center justify-center gap-1">
             <Mail size={12} className="text-white" />
-            <span className="font-medium break-all">{email}</span>
+            <a href={`mailto:${email}?subject=Business%Inquiry`}>
+              <span className="font-medium break-all">{email}</span>
+            </a>
           </div>
           <div className="flex items-center justify-center gap-1">
             <Phone size={12} className="text-white" />
@@ -135,13 +137,6 @@ const Step4 = () => {
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
-          </div>
-
-          {/* Middle Card */}
-          <MiddleCard />
-
-          {/* Right Cards */}
-          <div className="grid grid-cols-1  gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/luan.jpeg"
@@ -151,24 +146,31 @@ const Step4 = () => {
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
-            {/* <SalesRepCard
+          </div>
+
+          {/* Middle Card */}
+          <MiddleCard />
+
+          {/* Right Cards */}
+          <div className="grid grid-cols-1  gap-4">
+            <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/carlos.jpeg"
-              name="Carlos Smith"
-              text="A longtime collaborator and company insider, Carlos brings experience, insight, and solid support to every sale."
-              waqr="/images/wholesale_page/carloswa.jpg"
-              email="carlos@yywireless.com"
-              phonenumber="+1 515 305 - 8297"
+              image="/images/wholesale_page/blaik.png"
+              name="Blaik Woellhof"
+              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              waqr="/images/wholesale_page/blaikwa.png"
+              email="blaik@yywireless.com"
+              phonenumber="+1 515 305 - 8272"
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/starr.jpg"
-              name="STARR HOLCOMB"
-              text="From warehouse to sales floor, Starr's drive and fresh perspective make her a rising contributor on our team."
-              waqr="/images/wholesale_page/starrwa.jpg"
-              email="starr@yywireless.com"
-              phonenumber="+1 515 305 - 8272"
-            /> */}
+              image="/images/wholesale_page/karlaa.png"
+              name="Karla Contreras"
+              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              waqr="/images/wholesale_page/karlawa.png"
+              email="karla@yywireless.com"
+              phonenumber="+1 515 305 - 8292"
+            />
           </div>
         </div>
 
@@ -185,6 +187,15 @@ const Step4 = () => {
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/luan.jpeg"
+              name="Luan Pham"
+              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
+              waqr="/images/wholesale_page/nickwa.jpg"
+              email="luan@yywireless.com"
+              phonenumber="+1 515 822 - 0964"
+            />
           </div>
 
           {/* Middle Card - Full width */}
@@ -196,12 +207,21 @@ const Step4 = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/luan.jpeg"
-              name="Luan Pham"
-              text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
-              waqr="/images/wholesale_page/nickwa.jpg"
-              email="luan@yywireless.com"
-              phonenumber="+1 515 822 - 0964"
+              image="/images/wholesale_page/blaik.png"
+              name="Blaik Woellhof"
+              waqr="/images/wholesale_page/blaikwa.png"
+              email="blaik@yywireless.com"
+              text="Blaik brings high energy and a problem-solving mindset to every interaction. His proactive communication ensures partners always feel supported and confident."
+              phonenumber="+1 515 305 - 8272"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/karlaa.png"
+              name="Karla Contreras"
+              text="With a strong eye for detail and a client-first approach, Karla consistently delivers smooth transactions and builds lasting relationships across the board."
+              waqr="/images/wholesale_page/karlawa.png"
+              email="karla@yywireless.com"
+              phonenumber="+1 515 305 - 8292"
             />
           </div>
         </div>

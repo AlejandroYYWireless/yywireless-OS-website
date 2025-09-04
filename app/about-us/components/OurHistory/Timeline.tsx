@@ -16,7 +16,7 @@ const Timeline = () => {
     flip?: boolean;
   }) => (
     <div
-      className={`h-[380px] flex ${
+      className={`h-[380px] py-4 overflow-y-hidden flex ${
         flip ? "flex-col-reverse" : "flex-col"
       } justify-between items-center`}
     >
