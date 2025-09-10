@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
   Shield,
@@ -102,12 +101,13 @@ export default function PrivacyPolicyPage() {
                 </div>
               </div>
               <p className="font-semibold text-stone-200 leading-relaxed">
-                YYWireless/Bayshine Trading Inc. ("Company," "we," "our," or
-                "us") is committed to protecting the privacy of our users and
-                ensuring transparency regarding the collection, use, and
-                protection of personal information. This Privacy Policy explains
-                how we handle data when you visit our website (yywireless.com)
-                or engage with our services.
+                YYWireless/Bayshine Trading Inc. (&quot;Company,&quot;
+                &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed
+                to protecting the privacy of our users and ensuring transparency
+                regarding the collection, use, and protection of personal
+                information. This Privacy Policy explains how we handle data
+                when you visit our website (yywireless.com) or engage with our
+                services.
               </p>
             </div>
 
@@ -278,7 +278,7 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div className="border border-muted-foreground rounded-lg p-3">
                     <h4 className="font-semibold text-sm mb-1">
-                      Children's Online Privacy Protection Act (COPPA)
+                      Children&rsquo;s Online Privacy Protection Act (COPPA)
                     </h4>
                     <p className="text-xs text-stone-200">
                       We do not knowingly collect information from individuals
