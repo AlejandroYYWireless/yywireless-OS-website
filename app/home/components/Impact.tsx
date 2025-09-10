@@ -59,7 +59,7 @@ const Impact = () => {
               <span className="font-bold text-white">
                 60,000 metric tons of carbon dioxide--
               </span>{" "}
-              the equivilent of:
+              the equivalent of:
             </p>
 
             {/* Impact list with responsive text size and spacing */}
