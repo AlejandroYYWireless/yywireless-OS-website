@@ -83,7 +83,7 @@ const DesktopNavbar = () => {
               <Link
                 key={key}
                 href={item.href}
-                className="text-white hover:text-[#8aeb6a] transition-colors duration-200 font-medium"
+                className="text-white whitespace-nowrap hover:text-[#8aeb6a] transition-colors duration-200 font-medium"
               >
                 {item.label}
               </Link>

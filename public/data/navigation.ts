@@ -25,5 +25,9 @@ export const navigation = [
       href: "/contact-us",
       label: "Contact Us",
     },
+    "privacy-policy": {
+      href: "/privacy-policy",
+      label: "Privacy Policy",
+    },
   },
 ];
