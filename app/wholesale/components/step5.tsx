@@ -99,7 +99,8 @@ const Step5 = () => {
                   <XCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
                   <p className="text-sm">
                     Pressure tactics such as &quot;limited time offers&quot; or
-                    threats to cut off supply if payment isn't made quickly.
+                    threats to cut off supply if payment isn&apos;t made
+                    quickly.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
