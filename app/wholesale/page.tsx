@@ -3,6 +3,7 @@ import Step1 from "./components/step1";
 import Step2 from "./components/step2";
 import Step3 from "./components/step3";
 import Step4 from "./components/Step4";
+import Step5 from "./components/step5";
 
 const Page = () => {
   return (
@@ -34,7 +35,7 @@ const Page = () => {
         />
       </div>
       <Step4 />
-
+      <Step5 />
       <p className="z-10 bg-[#1c1c1c] text-muted-foreground uppercase text-xs">
         ©2025 YYWireless all rights reserved
       </p>
