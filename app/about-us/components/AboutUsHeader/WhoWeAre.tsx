@@ -4,7 +4,7 @@ import Image from "next/image";
 const WhoWeAre = () => {
   return (
     <div className="container pt-[100px] mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 xl:mt-[200px]">
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:pb-[200px]">
         {/* Text Content Section */}
         <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6 order-2 md:order-1 max-w-3xl">
           <h2 className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins text-center md:text-left">

@@ -1,3 +1,4 @@
+
 import AboutUsHeader from "./components/AboutUsHeader";
 import MeetTheTeam from "./components/AboutUsHeader/MeetTheTeam";
 import OurHistory from "./components/AboutUsHeader/OurHistory";
@@ -36,7 +37,6 @@ const Page = () => {
         <MeetTheTeam />
       </div>
       <WhyUsedMatters />
-
       <AboutUsTeamYY />
       <p className="z-10 bg-[#1c1c1c] text-muted-foreground uppercase text-xs">
         ©2025 YYWireless all rights reserved

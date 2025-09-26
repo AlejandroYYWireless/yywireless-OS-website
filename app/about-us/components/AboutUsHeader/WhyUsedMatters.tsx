@@ -1,3 +1,5 @@
+import Certifications from "./Certifications";
+
 const WhyUsedMatters = () => {
   interface WYMFooterElementProps {
     header: string;
@@ -22,8 +24,8 @@ const WhyUsedMatters = () => {
         {/* Text content section */}
         <div className="flex flex-col py-8 px-5 md:py-10 md:px-6 lg:py-12 xl:place-items-end order-2 md:order-1">
           <h3 className="uppercase mb-4 md:mb-6 text-4xl lg:text-5xl  xl:text-7xl font-poppins text-center md:text-right leading-tight">
-            why<span className="font-bold mx-2 md:mx-3 xl:mx-4">used</span>
-            matters
+            Why<span className="font-bold mx-2 md:mx-3 xl:mx-4">used</span>
+            matter
           </h3>
           <ul className="list-disc font-montserrat space-y-3 md:space-y-4 text-lg sm:text-xl xl:text-2xl max-w-full md:max-w-[600px] pl-6 md:pl-0 leading-relaxed">
             <li>
@@ -60,6 +62,7 @@ const WhyUsedMatters = () => {
         </div>
       </div>
 
+      <Certifications />
       {/* Stats footer */}
       <div className="flex flex-col sm:flex-row flex-wrap justify-around w-full bg-gradient-to-br from-[#379C2A] to-[#8BC53E] p-6 md:p-8 lg:p-12 shadow-lg gap-8 sm:gap-4">
         <WYMFooterElement header="2009" value="Year founded" />
