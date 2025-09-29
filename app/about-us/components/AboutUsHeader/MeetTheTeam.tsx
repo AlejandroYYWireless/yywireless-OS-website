@@ -72,7 +72,7 @@ const MeetTheTeam = () => {
       position: "E-Commerce Manager",
     },
     {
-      url: "/images/internal/leaders/brianneschwark.jpg",
+      url: "/images/internal/leaders/brianneschwarck.jpg",
       name: "Brianne Schwarck",
       position: "HR Manager",
     },
