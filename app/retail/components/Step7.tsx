@@ -104,7 +104,17 @@ const Step7 = () => {
                 />
               </div>
             </div>
-
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-12 w-full">
+              <a href="https://shopyywireless.com/" target="_blank">
+                <div className="flex hover:scale-105 bg-white transition-all shadow-md rounded-lg items-center justify-center w-48 sm:w-56 lg:w-64 h-24 sm:h-28 lg:h-32">
+                  <img
+                    src="/images/retail_page/shopify.png"
+                    alt="Walmart"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </a>
+            </div>
             {/* Bottom Text */}
           </div>
         </div>
