@@ -36,7 +36,7 @@ const Step7 = () => {
                 We&apos;re active on{" "}
                 <span className="font-semibold">Amazon</span>,{" "}
                 <span className="font-semibold">eBay</span>,{" "}
-                <span className="font-semibold">Walmart</span>, and{" "}
+                <span className="font-semibold">Walmart</span>,{" "}
                 <span className="font-semibold">Shopify</span>, and{" "}
                 <span className="font-semibold">more coming soon</span>, where
                 we maintain{" "}
