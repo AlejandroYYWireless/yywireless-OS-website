@@ -37,6 +37,7 @@ const Step7 = () => {
                 <span className="font-semibold">Amazon</span>,{" "}
                 <span className="font-semibold">eBay</span>,{" "}
                 <span className="font-semibold">Walmart</span>, and{" "}
+                <span className="font-semibold">Shopify</span>, and{" "}
                 <span className="font-semibold">more coming soon</span>, where
                 we maintain{" "}
                 <span className="italic">top-tier seller ratings</span> -
