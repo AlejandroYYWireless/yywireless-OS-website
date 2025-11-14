@@ -108,6 +108,7 @@ const Step4 = () => {
 
   return (
     <div
+      id="wholesale-section"
       className="bg-[#1c1c1c] 
      p-4 sm:p-6"
     >
