@@ -127,7 +127,8 @@ const Step4 = () => {
         {/* Desktop Layout - Hidden on mobile */}
         <div className="hidden lg:flex items-center place-content-center place-items-center justify-center gap-6">
           {/* Left Cards */}
-          <div className="grid grid-cols-1 gap-4 place-content-center">
+
+          <div className="grid grid-cols-3 gap-8">
             <SalesRepCard
               title="WHOLESALE MANAGER"
               image="/images/wholesale_page/nick.jpeg"
@@ -146,13 +147,6 @@ const Step4 = () => {
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
-          </div>
-
-          {/* Middle Card */}
-          <MiddleCard />
-
-          {/* Right Cards */}
-          <div className="grid grid-cols-1  gap-4">
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/blaik.png"
@@ -164,13 +158,24 @@ const Step4 = () => {
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/karlaa.png"
-              name="Karla Contreras"
-              text="With a strong eye for detail and a client-first approach, Karla consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/karlawa.png"
-              email="karla@yywireless.com"
-              phonenumber="+1 515 305 - 8292"
+              image="/images/wholesale_page/soniyaazhmen.webp"
+              name="Soniya Azhmen"
+              text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
+              waqr="/images/wholesale_page/soniyawa.jpg"
+              email="soniya@yywireless.com"
+              phonenumber="+1 515 525 - 0503"
             />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/ArelyOrtiz.webp"
+              name="Arely Ortiz"
+              text="Driven by precision and a people-first approach, Arely consistently delivers streamlined transactions and nurtures enduring partnerships"
+              waqr="/images/wholesale_page/arleywa.jpg"
+              email="arely@yywireless.com"
+              phonenumber="+1 515 305 - 8297"
+            />
+
+            <MiddleCard />
           </div>
         </div>
 
@@ -192,7 +197,7 @@ const Step4 = () => {
               image="/images/wholesale_page/luan.jpeg"
               name="Luan Pham"
               text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
-              waqr="/images/wholesale_page/nickwa.jpg"
+              waqr="/images/wholesale_page/luanwa.jpg"
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
@@ -216,12 +221,21 @@ const Step4 = () => {
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/karlaa.png"
-              name="Karla Contreras"
-              text="With a strong eye for detail and a client-first approach, Karla consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/karlawa.png"
-              email="karla@yywireless.com"
-              phonenumber="+1 515 305 - 8292"
+              image="/images/wholesale_page/soniyaazhmen.webp"
+              name="Soniya Azhmen"
+              text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
+              waqr="/images/wholesale_page/soniyawa.jpg"
+              email="soniya@yywireless.com"
+              phonenumber="+1 515 525 - 0503"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/ArelyOrtiz.webp"
+              name="Arely Ortiz"
+              text="Driven by precision and a people-first approach, Arely consistently delivers streamlined transactions and nurtures enduring partnerships"
+              waqr="/images/wholesale_page/arleywa.jpg"
+              email="arely@yywireless.com"
+              phonenumber="+1 515 305 - 8297"
             />
           </div>
         </div>

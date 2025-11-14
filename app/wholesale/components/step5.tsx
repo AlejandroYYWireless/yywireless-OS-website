@@ -130,7 +130,6 @@ const Step5 = () => {
                 <Badge variant="outline" className="font-mono">
                   info@yywireless.com
                 </Badge>
-                .
               </p>
               <p className="text-sm">
                 Call us immediately to confirm whether the request is
