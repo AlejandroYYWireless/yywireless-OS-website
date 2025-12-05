@@ -160,7 +160,7 @@ const Step4 = () => {
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/soniyaazhmen.webp"
-              name="Soniya Azhmen"
+              name="Soniya Azhman"
               text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
               waqr="/images/wholesale_page/soniyawa.jpg"
               email="soniya@yywireless.com"
@@ -223,7 +223,7 @@ const Step4 = () => {
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/soniyaazhmen.webp"
-              name="Soniya Azhmen"
+              name="Soniya Azhman"
               text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
               waqr="/images/wholesale_page/soniyawa.jpg"
               email="soniya@yywireless.com"
