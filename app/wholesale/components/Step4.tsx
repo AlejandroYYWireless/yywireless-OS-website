@@ -159,11 +159,11 @@ const Step4 = () => {
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/soniyaazhmen.webp"
-              name="Soniya Azhman"
-              text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/soniyawa.jpg"
-              email="soniya@yywireless.com"
+              image="/images/wholesale_page/daniel.png"
+              name="Daniel Strong"
+              text="With a strong eye for detail and a client-first approach, Daniel consistently delivers smooth transactions and builds lasting relationships across the board."
+              waqr="/images/wholesale_page/danielqr.png"
+              email="daniel@yywireless.com"
               phonenumber="+1 515 525 - 0503"
             />
             <SalesRepCard
@@ -222,11 +222,11 @@ const Step4 = () => {
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/soniyaazhmen.webp"
-              name="Soniya Azhman"
-              text="With a strong eye for detail and a client-first approach, Soniya consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/soniyawa.jpg"
-              email="soniya@yywireless.com"
+              image="/images/wholesale_page/daniel.png"
+              name="Daniel Strong"
+              text="With a strong eye for detail and a client-first approach, Daniel consistently delivers smooth transactions and builds lasting relationships across the board."
+              waqr="/images/wholesale_page/danielqr.png"
+              email="daniel@yywireless.com"
               phonenumber="+1 515 525 - 0503"
             />
             <SalesRepCard
