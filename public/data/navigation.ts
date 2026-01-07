@@ -29,5 +29,10 @@ export const navigation = [
       href: "/privacy-policy",
       label: "Privacy Policy",
     },
+    "assurant": {
+      href: "/assurant",
+      label: "Assurant",
+    },
+
   },
 ];

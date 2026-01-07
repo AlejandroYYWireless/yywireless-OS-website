@@ -253,10 +253,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Copyright text - centered and responsive */}
       <div className="relative w-full text-center mt-6 mb-2">
         <span className="text-sm sm:text-base md:text-lg lg:text-xl font-normal uppercase">
-          © 2025 yywireless all rights reserved.
+          ©{new Date().getFullYear()} YYWireless all rights reserved
         </span>
       </div>
 

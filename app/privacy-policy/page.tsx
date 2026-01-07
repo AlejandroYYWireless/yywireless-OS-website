@@ -429,7 +429,7 @@ export default function PrivacyPolicyPage() {
           <Separator className="my-6 bg-lime-500" />
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © 2025 YYWireless/Bayshine Trading Inc. All rights reserved.
+              ©{new Date().getFullYear()} YYWireless all rights reserved
             </p>
           </div>
         </div>

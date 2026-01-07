@@ -24,7 +24,7 @@ const Page = () => {
       </div>
       <Step8 />
       <p className="z-10 bg-[#1c1c1c] text-muted-foreground uppercase text-xs">
-        ©2025 YYWireless all rights reserved
+        ©{new Date().getFullYear()} YYWireless all rights reserved
       </p>
       <img
         className="w-full z-2"

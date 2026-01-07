@@ -47,7 +47,7 @@ const Page = () => {
         <Step6 />
         <div className="w-full z-1 absolute bottom-0">
           <p className="z-10 text-muted-foreground uppercase text-xs">
-            ©2025 YYWireless all rights reserved
+            ©{new Date().getFullYear()} YYWireless all rights reserved
           </p>
           <img
             className="w-full"
