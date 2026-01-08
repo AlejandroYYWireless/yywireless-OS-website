@@ -13,9 +13,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Contact = () => {
-  const [email, setEmail] = useState("");
-  const [reason, setReason] = useState("");
-
   const items = [
     "Wholesale",
     "Customer Service",
@@ -25,69 +22,72 @@ const Contact = () => {
     "Career",
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    // Form submission logic would go here
-    // Reset form after submission
-    toast.success("Successfully submitted! We'll be in touch shortly!", {
-      position: "top-center",
-    });
-    setEmail("");
-    setReason("");
-  };
+  const FormDialog = ({ contactType }: { contactType: string }) => {
+    const [email, setEmail] = useState("");
+    const [reason, setReason] = useState("");
 
-  const FormDialog = ({ contactType }: { contactType: string }) => (
-    <Dialog>
-      <DialogTrigger
-        className="w-full cursor-pointer font-lexendexa uppercase tracking-widest 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+      e.preventDefault();
+      toast.success("Successfully submitted! We'll be in touch shortly!", {
+        position: "top-center",
+      });
+      setEmail("");
+      setReason("");
+    };
+
+    return (
+      <Dialog>
+        <DialogTrigger
+          className="w-full cursor-pointer font-lexendexa uppercase tracking-widest 
                   md:w-[250px] lg:w-[280px] xl:w-[300px] 
                   h-12 sm:h-14 md:h-16 lg:h-18
                   bg-black text-center flex items-center justify-center
                   text-lg sm:text-xl lg:text-2xl text-white
                   transition-all duration-200 hover:bg-black/90"
-      >
-        {contactType}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-md md:max-w-lg">
-        <DialogHeader>
-          <DialogTitle className="text-xl sm:text-2xl font-semibold">
-            Contact {contactType}
-          </DialogTitle>
-          <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
-            Enter the form below with your email and reason for contacting and
-            we will reach out to you very soon.
-          </DialogDescription>
-        </DialogHeader>
-        <form onSubmit={handleSubmit} className="w-full space-y-2">
-          <input
-            className="p-2 w-full text-lg sm:text-xl md:text-2xl border border-gray-300 rounded-md"
-            type="email"
-            placeholder="Enter email here..."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <div className="bg-lime-500 h-[2px]" />
-          <textarea
-            className="text-lg sm:text-xl md:text-2xl p-2 min-h-[100px] w-full border border-gray-300 rounded-md"
-            placeholder="Enter reason for contact..."
-            value={reason}
-            onChange={(e) => setReason(e.target.value)}
-            required
-          />
-          <button
-            type="submit"
-            className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
+        >
+          {contactType}
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-md md:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-semibold">
+              Contact {contactType}
+            </DialogTitle>
+            <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
+              Enter the form below with your email and reason for contacting and
+              we will reach out to you very soon.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="w-full space-y-2">
+            <input
+              className="p-2 w-full text-lg sm:text-xl md:text-2xl border border-gray-300 rounded-md"
+              type="email"
+              placeholder="Enter email here..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <div className="bg-lime-500 h-[2px]" />
+            <textarea
+              className="text-lg sm:text-xl md:text-2xl p-2 min-h-[100px] w-full border border-gray-300 rounded-md"
+              placeholder="Enter reason for contact..."
+              value={reason}
+              onChange={(e) => setReason(e.target.value)}
+              required
+            />
+            <button
+              type="submit"
+              className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
                      disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
                      transition-colors hover:bg-lime-600"
-            disabled={!email || !reason}
-          >
-            Submit
-          </button>
-        </form>
-      </DialogContent>
-    </Dialog>
-  );
+              disabled={!email || !reason}
+            >
+              Submit
+            </button>
+          </form>
+        </DialogContent>
+      </Dialog>
+    );
+  };
 
   return (
     <div
@@ -95,7 +95,6 @@ const Contact = () => {
       className="flex flex-col min-h-full pt-8 md:pt-0 relative"
     >
       <div className="grid grid-cols-1 font-montserrat lg:grid-cols-2 h-full place-items-center md:pt-8 lg:pt-12 gap-6 md:gap-0">
-        {/* Left column with image and copyright */}
         <div className="flex justify-between h-auto md:h-[500px] lg:h-[550px] xl:h-[600px] w-full mb-8 md:mb-10 flex-col items-center">
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-full">
             <Image
@@ -109,7 +108,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right column with contact information */}
         <div className="p-4 sm:p-6 flex flex-col justify-between items-center w-full max-w-3xl">
           <h4 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-lexendMega uppercase font-semibold tracking-widest">
             Contact Us
@@ -120,14 +118,12 @@ const Contact = () => {
             and sustainability.
           </p>
 
-          {/* Grid for contact boxes */}
           <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-full max-w-4xl">
             {items.map((item, index) => (
               <FormDialog key={index} contactType={item} />
             ))}
           </div>
 
-          {/* Divider */}
           <div className="h-1 w-full bg-black mt-8 md:my-8" />
 
           <p className="uppercase font-inter text-xl sm:text-2xl lg:text-2xl mb-4 sm:mb-5 font-semibold mt-6 md:mt-0">

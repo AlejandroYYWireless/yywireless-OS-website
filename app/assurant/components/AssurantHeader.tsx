@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const NoteQuip = ({ text, iconLoc }: { text: string, iconLoc: string }) => {
   return (
-    <div className="rounded-4xl bg-[#828282] p-1 max-w-[400px]">
+    <div className="rounded-[4rem] bg-[#828282] p-1 max-w-[400px]">
       <div className="flex items-center text-center flex-col">
         <Image
           src={`/images/assurant_page/${iconLoc}.png`}
@@ -26,17 +26,14 @@ const AssurantHeader = () => {
     <div className="relative text-white min-h-[50vh] pt-12 bg-black w-full overflow-hidden pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-12 2xl:pb-4">
       <div className="absolute inset-0 z-0">
         <Image
-          src={"/images/assurant_page/whitelines1.png"}
+          src="/images/assurant_page/whitelines3.png"
           alt="background"
-          width={720}
-          height={1080}
-          className="object-cover w-full h-full"
-
+          fill
           priority
+          sizes="100vw"
+          className="object-cover"
         />
-      </div>
-
-      <div className="relative z-[1] flex flex-col gap-4 items-center h-full w-full">
+      </div>      <div className="relative z-[1] flex flex-col gap-4 items-center h-full w-full">
         <div className="pt-[60px] xl:pt-[80px] 2xl:pt-[100px]">
           <h1
             className="green-outline uppercase font-montserrat text-base
@@ -119,6 +116,7 @@ const AssurantHeader = () => {
           <NoteQuip iconLoc="star1" text="We provide value-added services beyond device sales, including repairs, unlocking, MDM setup, and certified quality control—helping streamline operations and enhance customer offerings." />
         </div>
       </div>
+
     </div>
   )
 };

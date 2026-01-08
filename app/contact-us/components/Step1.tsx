@@ -11,9 +11,6 @@ import {
 import { toast } from "sonner";
 
 const ContactPage = () => {
-  const [email, setEmail] = useState("");
-  const [reason, setReason] = useState("");
-
   const contactItems = [
     {
       title: "WHOLESALE",
@@ -63,83 +60,85 @@ const ContactPage = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-
-    // Form submission logic would go here
-    toast.success("Successfully submitted! We'll be in touch shortly!", {
-      position: "top-center",
-    });
-
-    // Reset form after submission
-    setEmail("");
-    setReason("");
-  };
-
   const FormDialog = ({
     contactItem,
   }: {
     contactItem: { title: string; description: string | React.ReactNode };
-  }) => (
-    <Dialog>
-      <DialogTrigger asChild>
-        <div className="flex flex-col items-center space-y-3 cursor-pointer group rounded-none">
-          <button className="w-full cursor-pointer max-w-[240px] h-12 bg-stone-500 rounded-none text-white font-bold text-base uppercase tracking-tight transition-colors duration-200">
-            {contactItem.title}
-          </button>
-          <div className="text-lime-600 text-xs text-center max-w-[240px] leading-relaxed group-hover:text-lime-500 transition-colors duration-200">
-            {contactItem.description}
+  }) => {
+    const [email, setEmail] = useState("");
+    const [reason, setReason] = useState("");
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+      e.preventDefault();
+
+      toast.success("Successfully submitted! We'll be in touch shortly!", {
+        position: "top-center",
+      });
+
+      setEmail("");
+      setReason("");
+    };
+
+    return (
+      <Dialog>
+        <DialogTrigger asChild>
+          <div className="flex flex-col items-center space-y-3 cursor-pointer group rounded-none">
+            <button className="w-full cursor-pointer max-w-[240px] h-12 bg-stone-500 rounded-none text-white font-bold text-base uppercase tracking-tight transition-colors duration-200">
+              {contactItem.title}
+            </button>
+            <div className="text-lime-600 text-xs text-center max-w-[240px] leading-relaxed group-hover:text-lime-500 transition-colors duration-200">
+              {contactItem.description}
+            </div>
           </div>
-        </div>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-md md:max-w-lg">
-        <DialogHeader>
-          <DialogTitle className="text-xl sm:text-2xl font-semibold">
-            Contact {contactItem.title}
-          </DialogTitle>
-          <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
-            Enter the form below with your email and reason for contacting and
-            we will reach out to you very soon.
-          </DialogDescription>
-        </DialogHeader>
-        <form onSubmit={handleSubmit} className="w-full space-y-4">
-          <div>
-            <input
-              className="p-3 w-full text-lg sm:text-xl border border-gray-300 rounded-md focus:ring-2 focus:ring-lime-500 focus:border-transparent"
-              type="email"
-              placeholder="Enter email here..."
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="bg-lime-500 h-[2px] rounded-full" />
-          <div>
-            <textarea
-              className="text-lg sm:text-xl p-3 min-h-[120px] w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-lime-500 focus:border-transparent resize-vertical"
-              placeholder="Enter reason for contact..."
-              value={reason}
-              onChange={(e) => setReason(e.target.value)}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl font-semibold p-3 rounded-md
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-md md:max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-semibold">
+              Contact {contactItem.title}
+            </DialogTitle>
+            <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
+              Enter the form below with your email and reason for contacting and
+              we will reach out to you very soon.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="w-full space-y-4">
+            <div>
+              <input
+                className="p-3 w-full text-lg sm:text-xl border border-gray-300 rounded-md focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+                type="email"
+                placeholder="Enter email here..."
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="bg-lime-500 h-[2px] rounded-full" />
+            <div>
+              <textarea
+                className="text-lg sm:text-xl p-3 min-h-[120px] w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-lime-500 focus:border-transparent resize-vertical"
+                placeholder="Enter reason for contact..."
+                value={reason}
+                onChange={(e) => setReason(e.target.value)}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl font-semibold p-3 rounded-md
                      disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed
                      transition-colors hover:bg-lime-600 focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
-            disabled={!email || !reason}
-          >
-            Submit
-          </button>
-        </form>
-      </DialogContent>
-    </Dialog>
-  );
+              disabled={!email || !reason}
+            >
+              Submit
+            </button>
+          </form>
+        </DialogContent>
+      </Dialog>
+    );
+  };
 
   return (
     <div className=" min-h-screen py-6 bg-[#1c1c1c] relative">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-cover bg-center opacity-30"
@@ -149,9 +148,7 @@ const ContactPage = () => {
         />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header Section */}
         <div className="text-center mb-8">
           <h1
             className="green-outline font-bold uppercase font-poppins 
@@ -176,7 +173,6 @@ const ContactPage = () => {
           </p>
         </div>
 
-        {/* Contact Grid */}
         <div className="grid grid-cols-1  md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl w-full mb-8">
           {contactItems.map((item, index) => (
             <FormDialog key={index} contactItem={item} />
