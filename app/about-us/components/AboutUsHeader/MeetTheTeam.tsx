@@ -31,6 +31,11 @@ const MeetTheTeam = () => {
       position: "C.O.O.",
     },
     {
+      url: "/images/internal/leaders/colton.png",
+      name: "Colton Barton",
+      position: "Controller",
+    },
+    {
       url: "/images/internal/leaders/missyjohnson.jpg",
       name: "Missy Johnson",
       position: "Accounting & Office Manager",
