@@ -33,7 +33,7 @@ const MeetTheTeam = () => {
     {
       url: "/images/internal/leaders/colton.png",
       name: "Colton Barton",
-      position: "Controller",
+      position: "Director of Accounting",
     },
     {
       url: "/images/internal/leaders/missyjohnson.jpg",
