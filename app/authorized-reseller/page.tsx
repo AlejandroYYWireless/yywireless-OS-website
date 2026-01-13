@@ -17,10 +17,7 @@ const Page = () => {
 
       <div className="z-10 hover:scale-[1.01] max-w-[300px] h-auto fixed bottom-0 right-2">
         <a target="_blank" href="https://buy.yywireless.com">
-          <img
-
-            src={"/images/assurant_page/signupbtn.png"}
-          />
+          <img src={"/images/assurant_page/signupbtn.png"} />
         </a>
       </div>
     </div>

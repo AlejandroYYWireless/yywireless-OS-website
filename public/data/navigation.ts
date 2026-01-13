@@ -29,10 +29,9 @@ export const navigation = [
       href: "/privacy-policy",
       label: "Privacy Policy",
     },
-    "assurant": {
-      href: "/assurant",
-      label: "Assurant",
+    assurant: {
+      href: "/authorized-reseller",
+      label: "Assurant Authorized Reseller",
     },
-
   },
 ];
