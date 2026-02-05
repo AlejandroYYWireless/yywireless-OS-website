@@ -43,7 +43,7 @@ const MeetTheTeam = () => {
     {
       url: "/images/internal/leaders/anthonybattillo.jpg",
       name: "Anthony Batillo",
-      position: "Innovation Manager",
+      position: "Director of Technology & Innovation",
     },
     {
       url: "/images/internal/leaders/maggiechen.jpg",
