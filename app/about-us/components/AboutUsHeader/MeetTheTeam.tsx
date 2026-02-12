@@ -60,6 +60,12 @@ const MeetTheTeam = () => {
       name: "Song GongBo",
       position: "Production Manager",
     },
+
+    {
+      url: "/images/internal/leaders/mirella.png",
+      name: "Mirella Cruz",
+      position: "Product & Receiving Manager",
+    },
     {
       url: "/images/internal/leaders/frankyxiao.jpg",
       name: "Franky Xiao",
@@ -76,10 +82,16 @@ const MeetTheTeam = () => {
       name: "Ling Qiu",
       position: "E-Commerce Manager",
     },
+
     {
-      url: "/images/internal/leaders/brianneschwarck.jpg",
-      name: "Brianne Schwarck",
-      position: "HR Manager",
+      url: "/images/internal/leaders/christina.png",
+      name: "Christina Lehan",
+      position: "Live Commerce Manager",
+    },
+    {
+      url: "/images/internal/leaders/david.png",
+      name: "David Paulson",
+      position: "Strategic Sourcing Manager",
     },
   ];
   return (
@@ -93,7 +105,7 @@ const MeetTheTeam = () => {
           Meet The Team
         </h1>
         <div
-          className="mt-8 p-2 sm:p-4 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 
+          className="mt-8 p-2 sm:p-4 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 
                       gap-8 md:gap-10 justify-items-center content-start"
         >
           {teamMembers.map((member, index) => (
