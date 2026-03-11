@@ -140,6 +140,16 @@ const Step4 = () => {
               phonenumber="+1 515 723 - 9908"
             />
             <SalesRepCard
+              title="STRATEGIC SOURCING MANAGER"
+              image="/images/wholesale_page/david.png"
+              name="Dave Paulson"
+              text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
+              waqr="/images/wholesale_page/davewa.png"
+              email="david@yywireless.com"
+              phonenumber="+1 515 451 - 9292"
+            />
+
+            <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/luan.jpeg"
               name="Luan Pham"
@@ -158,6 +168,7 @@ const Step4 = () => {
               email="daniel@yywireless.com"
               phonenumber="+1 515 525 - 0503"
             />
+
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/ArelyOrtiz.webp"
@@ -186,6 +197,16 @@ const Step4 = () => {
               phonenumber="+1 515 723 - 9908"
             />
             <SalesRepCard
+              title="STRATEGIC SOURCING MANAGER"
+              image="/images/wholesale_page/david.png"
+              name="Dave Paulson"
+              text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
+              waqr="/images/wholesale_page/davewa.png"
+              email="david@yywireless.com"
+              phonenumber="+1 515 451 - 9292"
+            />
+
+            <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/luan.jpeg"
               name="Luan Pham"
@@ -203,7 +224,6 @@ const Step4 = () => {
 
           {/* Second Row - 2 cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
             <SalesRepCard
               title="SALES REPRESENTATIVE"
               image="/images/wholesale_page/daniel.png"
