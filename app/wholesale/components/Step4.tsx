@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Step4 = () => {
   const SalesRepCard = ({
@@ -28,11 +29,14 @@ const Step4 = () => {
         {/* Profile Image */}
         <div className="mb-3">
           <div className="w-40 h-40 mx-auto bg-white p-1 rounded-lg">
-            <img
+            <Image
+              height={500}
+              width={500}
+              sizes="(max-width: 768px) 300px, 160px"
               src={image}
               alt={name}
               className="w-full h-full object-cover rounded-lg"
-            />
+            />{" "}
           </div>
         </div>
 
@@ -171,12 +175,12 @@ const Step4 = () => {
 
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/ArelyOrtiz.webp"
-              name="Arely Ortiz"
-              text="Driven by precision and a people-first approach, Arely consistently delivers streamlined transactions and nurtures enduring partnerships."
-              waqr="/images/wholesale_page/arleywa.jpg"
-              email="arely@yywireless.com"
-              phonenumber="+1 515 305 - 8297"
+              image="/images/wholesale_page/Joel.jpg"
+              name="Joel Murillo"
+              text="Driven by precision and a people-first approach, Joel consistently delivers streamlined transactions and nurtures enduring partnerships."
+              waqr="/images/wholesale_page/joelwa.png"
+              email="joel@yywireless.com"
+              phonenumber="+1 515 305 - 8272"
             />
 
             <MiddleCard />
@@ -235,12 +239,12 @@ const Step4 = () => {
             />
             <SalesRepCard
               title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/ArelyOrtiz.webp"
-              name="Arely Ortiz"
-              text="Driven by precision and a people-first approach, Arely consistently delivers streamlined transactions and nurtures enduring partnerships."
-              waqr="/images/wholesale_page/arleywa.jpg"
-              email="arely@yywireless.com"
-              phonenumber="+1 515 305 - 8297"
+              image="/images/wholesale_page/Joel.jpg"
+              name="Joel Murillo"
+              text="Driven by precision and a people-first approach, Joel consistently delivers streamlined transactions and nurtures enduring partnerships."
+              waqr="/images/wholesale_page/joelwa.png"
+              email="joel@yywireless.com"
+              phonenumber="+1 515 305 - 8272"
             />
           </div>
         </div>
