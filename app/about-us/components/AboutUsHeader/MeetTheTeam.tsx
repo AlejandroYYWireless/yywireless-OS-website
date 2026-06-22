@@ -76,13 +76,6 @@ const MeetTheTeam = () => {
       name: "Nick Kalianoff",
       position: "Wholesale Manager",
     },
-
-    {
-      url: "/images/internal/leaders/lingqiu.jpg",
-      name: "Ling Qiu",
-      position: "E-Commerce Manager",
-    },
-
     {
       url: "/images/internal/leaders/christina.png",
       name: "Christina Lehan",
