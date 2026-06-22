@@ -182,6 +182,15 @@ const Step4 = () => {
               email="joel@yywireless.com"
               phonenumber="+1 515 305 - 8272"
             />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/blaik.png"
+              name="Blaik Woellhof"
+              text="Reliable, hardworking, and backed by years of experience, Blaik's unwavering commitment has earned the admiration of our partners."
+              waqr="/images/wholesale_page/blaikwa.png"
+              email="blaik@yywireless.com"
+              phonenumber="+1 515 305 - 8297"
+            />
 
             <MiddleCard />
           </div>
@@ -245,6 +254,15 @@ const Step4 = () => {
               waqr="/images/wholesale_page/joelwa.png"
               email="joel@yywireless.com"
               phonenumber="+1 515 305 - 8272"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/blaik.png"
+              name="Blaik Woellhof"
+              text="Reliable, hardworking, and backed by years of experience, Blaik's unwavering commitment has earned the admiration of our partners."
+              waqr="/images/wholesale_page/blaikwa.png"
+              email="blaik@yywireless.com"
+              phonenumber="+1 515 305 - 8297"
             />
           </div>
         </div>
