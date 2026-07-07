@@ -150,7 +150,7 @@ const Step4 = () => {
               text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
               waqr="/images/wholesale_page/davewa.png"
               email="david@yywireless.com"
-              phonenumber="+1 515 451 - 9292"
+              phonenumber="+1 515 451 - 9792"
             />
 
             <SalesRepCard
@@ -216,7 +216,7 @@ const Step4 = () => {
               text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
               waqr="/images/wholesale_page/davewa.png"
               email="david@yywireless.com"
-              phonenumber="+1 515 451 - 9292"
+              phonenumber="+1 515 451 - 9792"
             />
 
             <SalesRepCard
