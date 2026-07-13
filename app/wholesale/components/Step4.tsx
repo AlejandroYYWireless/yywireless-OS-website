@@ -154,8 +154,8 @@ const Step4 = () => {
             />
 
             <SalesRepCard
-              title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/luan.jpeg"
+              title="SENIOR SALES REPRESENTATIVE"
+              image="/images/wholesale_page/luannew.png"
               name="Luan Pham"
               text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
               waqr="/images/wholesale_page/nickwa.jpg"
@@ -191,6 +191,24 @@ const Step4 = () => {
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8297"
             />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/zack.png"
+              name="Zach Stone"
+              text="With a reputation for being reliable and hardworking, Zach brings years of experience and an unwavering commitment that has earned the genuine admiration of our partners."
+              waqr="/images/wholesale_page/zachwa.png"
+              email="zach@yywireless.com"
+              phonenumber="+1 515 567 - 1280"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/diana.png"
+              name="Diana Hsu"
+              text="Driven, resourceful, and deeply reliable, Diana brings years of industry experience and an unwavering commitment that has earned the high regard of our partners."
+              waqr="/images/wholesale_page/dianawa.png"
+              email="diana@yywireless.com"
+              phonenumber="+1 515 419 8712"
+            />
 
             <MiddleCard />
           </div>
@@ -220,8 +238,8 @@ const Step4 = () => {
             />
 
             <SalesRepCard
-              title="SALES REPRESENTATIVE"
-              image="/images/wholesale_page/luan.jpeg"
+              title="SENIOR SALES REPRESENTATIVE"
+              image="/images/wholesale_page/luannew.png"
               name="Luan Pham"
               text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
               waqr="/images/wholesale_page/luanwa.jpg"
@@ -263,6 +281,24 @@ const Step4 = () => {
               waqr="/images/wholesale_page/blaikwa.png"
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8297"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/zack.png"
+              name="Zach Stone"
+              text="With a reputation for being reliable and hardworking, Zach brings years of experience and an unwavering commitment that has earned the genuine admiration of our partners."
+              waqr="/images/wholesale_page/zachwa.png"
+              email="zach@yywireless.com"
+              phonenumber="+1 515 567 - 1280"
+            />
+            <SalesRepCard
+              title="SALES REPRESENTATIVE"
+              image="/images/wholesale_page/diana.png"
+              name="Diana Hsu"
+              text="Driven, resourceful, and deeply reliable, Diana brings years of industry experience and an unwavering commitment that has earned the high regard of our partners."
+              waqr="/images/wholesale_page/dianawa.png"
+              email="diana@yywireless.com"
+              phonenumber="+1 515 419 8712"
             />
           </div>
         </div>
