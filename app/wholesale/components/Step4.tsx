@@ -26,7 +26,6 @@ const Step4 = () => {
           {title}
         </div>
 
-        {/* Profile Image */}
         <div className="mb-3">
           <div className="w-40 h-40 mx-auto bg-white p-1 rounded-lg">
             <Image
@@ -50,7 +49,7 @@ const Step4 = () => {
 
         {/* QR Code */}
         <div className="mb-3">
-          <div className="w-12 h-12 mx-auto bg-white p-1 rounded">
+          <div className="w-20 h-20 mx-auto bg-white p-1 rounded">
             <img
               src={waqr}
               alt="QR Code"
@@ -139,7 +138,7 @@ const Step4 = () => {
               image="/images/wholesale_page/nick.jpeg"
               name="NICK KALIANOFF"
               text="Leads our team with strategy and focus, ensuring clients get reliable service, top-tier products, and long-term value."
-              waqr="/images/wholesale_page/nickwa.jpg"
+              waqr="/images/wholesale_page/nickwaqr.png"
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
@@ -148,7 +147,7 @@ const Step4 = () => {
               image="/images/wholesale_page/david.png"
               name="Dave Paulson"
               text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
-              waqr="/images/wholesale_page/davewa.png"
+              waqr="/images/wholesale_page/davidwaqr.png"
               email="david@yywireless.com"
               phonenumber="+1 515 451 - 9792"
             />
@@ -158,7 +157,7 @@ const Step4 = () => {
               image="/images/wholesale_page/luannew.png"
               name="Luan Pham"
               text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
-              waqr="/images/wholesale_page/nickwa.jpg"
+              waqr="/images/wholesale_page/luanwaqr.png"
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
@@ -168,7 +167,7 @@ const Step4 = () => {
               image="/images/wholesale_page/daniel.png"
               name="Daniel Strong"
               text="With a strong eye for detail and a client-first approach, Daniel consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/danielqr.png"
+              waqr="/images/wholesale_page/danielwaqr.png"
               email="daniel@yywireless.com"
               phonenumber="+1 515 525 - 0503"
             />
@@ -178,7 +177,7 @@ const Step4 = () => {
               image="/images/wholesale_page/Joel.jpg"
               name="Joel Murillo"
               text="Driven by precision and a people-first approach, Joel consistently delivers streamlined transactions and nurtures enduring partnerships."
-              waqr="/images/wholesale_page/joelwa.png"
+              waqr="/images/wholesale_page/joelwaqr.png"
               email="joel@yywireless.com"
               phonenumber="+1 515 305 - 8272"
             />
@@ -187,7 +186,7 @@ const Step4 = () => {
               image="/images/wholesale_page/blaik.png"
               name="Blaik Woellhof"
               text="Reliable, hardworking, and backed by years of experience, Blaik's unwavering commitment has earned the admiration of our partners."
-              waqr="/images/wholesale_page/blaikwa.png"
+              waqr="/images/wholesale_page/blaikwaqr.png"
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8297"
             />
@@ -196,7 +195,7 @@ const Step4 = () => {
               image="/images/wholesale_page/zack.png"
               name="Zach Stone"
               text="With a reputation for being reliable and hardworking, Zach brings years of experience and an unwavering commitment that has earned the genuine admiration of our partners."
-              waqr="/images/wholesale_page/zachwa.png"
+              waqr="/images/wholesale_page/zachwaqr.png"
               email="zach@yywireless.com"
               phonenumber="+1 515 567 - 1280"
             />
@@ -205,7 +204,7 @@ const Step4 = () => {
               image="/images/wholesale_page/diana.png"
               name="Diana Hsu"
               text="Driven, resourceful, and deeply reliable, Diana brings years of industry experience and an unwavering commitment that has earned the high regard of our partners."
-              waqr="/images/wholesale_page/dianawa.png"
+              waqr="/images/wholesale_page/dianawaqr.png"
               email="diana@yywireless.com"
               phonenumber="+1 515 419 8712"
             />
@@ -223,7 +222,7 @@ const Step4 = () => {
               image="/images/wholesale_page/nick.jpeg"
               name="NICK KALIANOFF"
               text="Leads our team with strategy and focus, ensuring clients get reliable service, top-tier products, and long-term value."
-              waqr="/images/wholesale_page/nickwa.jpg"
+              waqr="/images/wholesale_page/nickwaqr.png"
               email="nick@yywireless.com"
               phonenumber="+1 515 723 - 9908"
             />
@@ -232,7 +231,7 @@ const Step4 = () => {
               image="/images/wholesale_page/david.png"
               name="Dave Paulson"
               text="Reliable and knowledgeable — David draws on experience across multiple fields to help clients reach their goals."
-              waqr="/images/wholesale_page/davewa.png"
+              waqr="/images/wholesale_page/davidwaqr.png"
               email="david@yywireless.com"
               phonenumber="+1 515 451 - 9792"
             />
@@ -242,7 +241,7 @@ const Step4 = () => {
               image="/images/wholesale_page/luannew.png"
               name="Luan Pham"
               text="Hardworking, dependable, and deeply experienced - Luan's commitment makes him a favorite among our partners."
-              waqr="/images/wholesale_page/luanwa.jpg"
+              waqr="/images/wholesale_page/luanwaqr.png"
               email="luan@yywireless.com"
               phonenumber="+1 515 822 - 0964"
             />
@@ -260,7 +259,7 @@ const Step4 = () => {
               image="/images/wholesale_page/daniel.png"
               name="Daniel Strong"
               text="With a strong eye for detail and a client-first approach, Daniel consistently delivers smooth transactions and builds lasting relationships across the board."
-              waqr="/images/wholesale_page/danielqr.png"
+              waqr="/images/wholesale_page/danielwaqr.png"
               email="daniel@yywireless.com"
               phonenumber="+1 515 525 - 0503"
             />
@@ -269,7 +268,7 @@ const Step4 = () => {
               image="/images/wholesale_page/Joel.jpg"
               name="Joel Murillo"
               text="Driven by precision and a people-first approach, Joel consistently delivers streamlined transactions and nurtures enduring partnerships."
-              waqr="/images/wholesale_page/joelwa.png"
+              waqr="/images/wholesale_page/joelwaqr.png"
               email="joel@yywireless.com"
               phonenumber="+1 515 305 - 8272"
             />
@@ -278,7 +277,7 @@ const Step4 = () => {
               image="/images/wholesale_page/blaik.png"
               name="Blaik Woellhof"
               text="Reliable, hardworking, and backed by years of experience, Blaik's unwavering commitment has earned the admiration of our partners."
-              waqr="/images/wholesale_page/blaikwa.png"
+              waqr="/images/wholesale_page/blaikwaqr.png"
               email="blaik@yywireless.com"
               phonenumber="+1 515 305 - 8297"
             />
@@ -287,7 +286,7 @@ const Step4 = () => {
               image="/images/wholesale_page/zack.png"
               name="Zach Stone"
               text="With a reputation for being reliable and hardworking, Zach brings years of experience and an unwavering commitment that has earned the genuine admiration of our partners."
-              waqr="/images/wholesale_page/zachwa.png"
+              waqr="/images/wholesale_page/zachwaqr.png"
               email="zach@yywireless.com"
               phonenumber="+1 515 567 - 1280"
             />
@@ -296,7 +295,7 @@ const Step4 = () => {
               image="/images/wholesale_page/diana.png"
               name="Diana Hsu"
               text="Driven, resourceful, and deeply reliable, Diana brings years of industry experience and an unwavering commitment that has earned the high regard of our partners."
-              waqr="/images/wholesale_page/dianawa.png"
+              waqr="/images/wholesale_page/dianawaqr.png"
               email="diana@yywireless.com"
               phonenumber="+1 515 419 8712"
             />

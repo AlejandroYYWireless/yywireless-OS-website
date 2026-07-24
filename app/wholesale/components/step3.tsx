@@ -29,24 +29,24 @@ const Step3 = () => {
                           text-[#8aeb6a] mb-6 lg:mb-8 text-center lg:text-left
                           leading-tight"
               >
-                The inventory
+                Wholesale Portal
               </h1>
 
               <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
                 <div>
                   <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold uppercase mb-3 lg:mb-4 leading-tight">
-                    See what&apos;s in stock
+                    Buy anywhere, anytime
                   </h2>
                   <p className="text-sm sm:text-base lg:text-lg xl:text-xl mb-4 lg:mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Browse our real-time inventory of devices, tested and
-                    ready-to-ship.
+                    Our customer portal was built to make it easy to browse and
+                    purchase our inventory at your convenience.
                   </p>
                   <a
                     href="https://docs.google.com/spreadsheets/d/1x-UOW2Es8fVqAjhkNsDt7xpdIF-ewpEp8VfNaJnWWis/edit?gid=0#gid=0"
                     target="_blank"
                     className="inline-block bg-[#8aeb6a] text-black px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded font-bold uppercase hover:bg-green-400  text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                   >
-                    View live inventory sheet
+                    Visit Portal Now
                   </a>
                 </div>
               </div>
@@ -59,9 +59,9 @@ const Step3 = () => {
                   <div className="mb-4 sm:mb-6">
                     <p className="text-sm sm:text-base lg:text-lg xl:text-xl mb-2 leading-relaxed">
                       <span className="text-[#8aeb6a] font-bold uppercase text-base sm:text-lg lg:text-xl">
-                        Wide selection
+                        FAST AND SIMPLE
                       </span>{" "}
-                      of smartphones, tablets, laptops, and smartwatches
+                      Built with customer experience and speed at the forefront
                     </p>
                   </div>
 

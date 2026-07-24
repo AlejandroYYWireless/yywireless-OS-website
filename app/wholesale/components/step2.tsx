@@ -31,12 +31,9 @@ const Step2 = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-12 py-8 sm:py-12">
         <div className="text-center max-w-6xl w-full">
-          {/* Main Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-6 sm:mb-8 text-center sm:text-right leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-6 sm:mb-8 text-center leading-tight">
             WHAT WE OFFER
           </h1>
-
-          {/* Description Paragraphs */}
           <div className="mb-8 sm:mb-12 space-y-4 sm:space-y-6">
             <p className="text-gray-700 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed max-w-5xl mx-auto">
               We process 5,000 devices daily - over 1 million annually - through
