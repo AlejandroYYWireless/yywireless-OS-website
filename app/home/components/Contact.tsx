@@ -11,6 +11,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import Image from "next/image";
 import Link from "next/link";
+import { Loader2 } from "lucide-react";
+import { toCapitalCase } from "@/lib/utils";
 
 const Contact = () => {
   const items = [
@@ -25,18 +27,44 @@ const Contact = () => {
   const FormDialog = ({ contactType }: { contactType: string }) => {
     const [email, setEmail] = useState("");
     const [reason, setReason] = useState("");
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    const [loading, setLoading] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(false);
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      toast.success("Successfully submitted! We'll be in touch shortly!", {
-        position: "top-center",
-      });
-      setEmail("");
-      setReason("");
+      setLoading(true);
+      try {
+        const response = await fetch("/api/submit-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: email,
+            body: reason,
+            category: contactType,
+          }),
+        });
+        const data = await response.json();
+        if (!response?.ok) {
+          throw new Error(data?.error || "Failed to get response body");
+        } else {
+          toast.success("Successfully submitted! We'll be in touch shortly!", {
+            position: "top-center",
+          });
+          setEmail("");
+          setReason("");
+          setOpen(false);
+        }
+      } catch (error) {
+        toast.error("Failed to submit email..");
+        console.error("Failed to submit", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     return (
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger
           className="w-full cursor-pointer font-lexendexa uppercase tracking-widest 
                   md:w-[250px] lg:w-[280px] xl:w-[300px] 
@@ -50,7 +78,7 @@ const Contact = () => {
         <DialogContent className="sm:max-w-md md:max-w-lg">
           <DialogHeader>
             <DialogTitle className="text-xl sm:text-2xl font-semibold">
-              Contact {contactType}
+              Contact {toCapitalCase(contactType)}
             </DialogTitle>
             <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
               Enter the form below with your email and reason for contacting and
@@ -78,9 +106,12 @@ const Contact = () => {
               type="submit"
               className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
                      disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
-                     transition-colors hover:bg-lime-600"
+                     transition-colors hover:bg-lime-600 "
               disabled={!email || !reason}
             >
+              {loading ? (
+                <Loader2 className="animate-spin text-white inline-flex" />
+              ) : null}{" "}
               Submit
             </button>
           </form>

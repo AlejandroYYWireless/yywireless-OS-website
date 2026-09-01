@@ -9,6 +9,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
+import { toCapitalCase } from "@/lib/utils";
 
 const ContactPage = () => {
   const contactItems = [
@@ -67,20 +69,45 @@ const ContactPage = () => {
   }) => {
     const [email, setEmail] = useState("");
     const [reason, setReason] = useState("");
+    const [loading, setLoading] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(false);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-
-      toast.success("Successfully submitted! We'll be in touch shortly!", {
-        position: "top-center",
-      });
-
-      setEmail("");
-      setReason("");
+      setLoading(true);
+      try {
+        const response = await fetch("/api/submit-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: email,
+            body: reason,
+            category: contactItem.title,
+          }),
+        });
+        const data = await response.json();
+        if (!response?.ok) {
+          throw new Error(data?.error || "Failed to get response body");
+        } else {
+          toast.success("Successfully submitted! We'll be in touch shortly!", {
+            position: "top-center",
+          });
+          setEmail("");
+          setReason("");
+          setOpen(false);
+        }
+      } catch (error) {
+        toast.error("Failed to submit email..");
+        console.error("Failed to submit", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     return (
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <div className="flex flex-col items-center space-y-3 cursor-pointer group rounded-none">
             <button className="w-full cursor-pointer max-w-[240px] h-12 bg-stone-500 rounded-none text-white font-bold text-base uppercase tracking-tight transition-colors duration-200">
@@ -94,7 +121,7 @@ const ContactPage = () => {
         <DialogContent className="sm:max-w-md md:max-w-lg">
           <DialogHeader>
             <DialogTitle className="text-xl sm:text-2xl font-semibold">
-              Contact {contactItem.title}
+              Contact {toCapitalCase(contactItem.title)}
             </DialogTitle>
             <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
               Enter the form below with your email and reason for contacting and
@@ -124,11 +151,14 @@ const ContactPage = () => {
             </div>
             <button
               type="submit"
-              className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl font-semibold p-3 rounded-md
-                     disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed
-                     transition-colors hover:bg-lime-600 focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+              className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
+                     disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
+                     transition-colors hover:bg-lime-600 "
               disabled={!email || !reason}
             >
+              {loading ? (
+                <Loader2 className="animate-spin text-white inline-flex" />
+              ) : null}{" "}
               Submit
             </button>
           </form>
