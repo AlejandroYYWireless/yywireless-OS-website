@@ -42,7 +42,7 @@ const Step3 = () => {
                     purchase our inventory at your convenience.
                   </p>
                   <a
-                    href="https://docs.google.com/spreadsheets/d/1x-UOW2Es8fVqAjhkNsDt7xpdIF-ewpEp8VfNaJnWWis/edit?gid=0#gid=0"
+                    href="https://wholesale.yywireless.com/"
                     target="_blank"
                     className="inline-block bg-[#8aeb6a] text-black px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded font-bold uppercase hover:bg-green-400  text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                   >
