@@ -21,6 +21,7 @@ export async function POST(request: Request) {
     const body = requestBody?.body;
     const from = requestBody?.from;
     const category = requestBody?.category;
+    const phoneNumber = requestBody?.phoneNumber;
     if (!body || !from || !category) {
       return NextResponse.json(
         { error: "Missing body or from" },
@@ -53,6 +54,7 @@ export async function POST(request: Request) {
           email: from,
           body: body,
           category: category,
+          phoneNumber: phoneNumber,
         }),
       });
       if (error) {

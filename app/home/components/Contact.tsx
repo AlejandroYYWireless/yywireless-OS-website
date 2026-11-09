@@ -26,6 +26,7 @@ const Contact = () => {
 
   const FormDialog = ({ contactType }: { contactType: string }) => {
     const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [reason, setReason] = useState("");
     const [loading, setLoading] = useState<boolean>(false);
     const [open, setOpen] = useState<boolean>(false);
@@ -40,6 +41,7 @@ const Contact = () => {
           },
           body: JSON.stringify({
             from: email,
+            phoneNumber: phoneNumber,
             body: reason,
             category: contactType,
           }),
@@ -52,6 +54,7 @@ const Contact = () => {
             position: "top-center",
           });
           setEmail("");
+          setPhoneNumber("");
           setReason("");
           setOpen(false);
         }
@@ -93,6 +96,14 @@ const Contact = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+            />
+            <input
+              className="p-2 w-full text-lg sm:text-xl md:text-2xl border border-gray-300 rounded-md"
+              type="tel"
+              inputMode="tel"
+              placeholder="Enter phone number (optional)..."
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <div className="bg-lime-500 h-[2px]" />
             <textarea

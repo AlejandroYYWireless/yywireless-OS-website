@@ -4,11 +4,14 @@ interface CustomerInquiryTemplateProps {
   email: string;
   body: string;
   category: string;
+  phoneNumber?: string;
 }
+
 export const CustomerInquiryTemplate = ({
   email,
   body,
   category,
+  phoneNumber,
 }: CustomerInquiryTemplateProps) => {
   return (
     <div
@@ -138,17 +141,47 @@ export const CustomerInquiryTemplate = ({
                         Customer Email
                       </p>
                       <a
-                        href={`mailto:${email}?subject=In response to your ${toCapitalCase(category)} inquiery`}
+                        href={`mailto:${email}?subject=In response to your ${toCapitalCase(category)} inquiry`}
                         style={{
                           fontSize: "15px",
                           fontWeight: "600",
                           color: "#111827",
                           textDecoration: "underline",
                           margin: 0,
+                          display: "block",
                         }}
                       >
                         {email}
                       </a>
+
+                      {phoneNumber && (
+                        <div style={{ marginTop: "16px" }}>
+                          <p
+                            style={{
+                              fontSize: "11px",
+                              fontWeight: "700",
+                              textTransform: "uppercase",
+                              color: "#6b7280",
+                              letterSpacing: "0.05em",
+                              margin: "0 0 4px 0",
+                            }}
+                          >
+                            Customer Phone
+                          </p>
+                          <a
+                            href={`tel:${phoneNumber}`}
+                            style={{
+                              fontSize: "15px",
+                              fontWeight: "600",
+                              color: "#111827",
+                              textDecoration: "underline",
+                              margin: 0,
+                            }}
+                          >
+                            {phoneNumber}
+                          </a>
+                        </div>
+                      )}
                     </td>
                   </tr>
                 </tbody>
@@ -194,7 +227,7 @@ export const CustomerInquiryTemplate = ({
                   <tr>
                     <td align="center">
                       <a
-                        href={`mailto:${email}?subject=In response to your ${toCapitalCase(category)} inquiery`}
+                        href={`mailto:${email}?subject=In response to your ${toCapitalCase(category)} inquiry`}
                         style={{
                           backgroundColor: "#000000",
                           color: "#ffffff",
@@ -255,4 +288,5 @@ export const CustomerInquiryTemplate = ({
     </div>
   );
 };
+
 export default CustomerInquiryTemplate;

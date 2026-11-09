@@ -68,6 +68,7 @@ const ContactPage = () => {
     contactItem: { title: string; description: string | React.ReactNode };
   }) => {
     const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [reason, setReason] = useState("");
     const [loading, setLoading] = useState<boolean>(false);
     const [open, setOpen] = useState<boolean>(false);
@@ -83,6 +84,7 @@ const ContactPage = () => {
           },
           body: JSON.stringify({
             from: email,
+            phoneNumber: phoneNumber.trim() || undefined,
             body: reason,
             category: contactItem.title,
           }),
@@ -95,6 +97,7 @@ const ContactPage = () => {
             position: "top-center",
           });
           setEmail("");
+          setPhoneNumber("");
           setReason("");
           setOpen(false);
         }
@@ -124,8 +127,8 @@ const ContactPage = () => {
               Contact {toCapitalCase(contactItem.title)}
             </DialogTitle>
             <DialogDescription className="bg-muted/50 p-2 rounded-lg text-sm sm:text-base">
-              Enter the form below with your email and reason for contacting and
-              we will reach out to you very soon.
+              Enter the form below with your contact info and reason for
+              reaching out, and we will respond shortly.
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="w-full space-y-4">
@@ -137,6 +140,16 @@ const ContactPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+              />
+            </div>
+            <div>
+              <input
+                className="p-3 w-full text-lg sm:text-xl border border-gray-300 rounded-md focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+                type="tel"
+                inputMode="tel"
+                placeholder="Enter phone number (optional)..."
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
             <div className="bg-lime-500 h-[2px] rounded-full" />
@@ -152,13 +165,13 @@ const ContactPage = () => {
             <button
               type="submit"
               className="bg-lime-500 w-full text-white cursor-pointer text-lg sm:text-xl md:text-2xl p-2 rounded-md
-                     disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
-                     transition-colors hover:bg-lime-600 "
-              disabled={!email || !reason}
+                       disabled:bg-accent disabled:text-black disabled:cursor-not-allowed
+                       transition-colors hover:bg-lime-600 "
+              disabled={!email || !reason || loading}
             >
               {loading ? (
-                <Loader2 className="animate-spin text-white inline-flex" />
-              ) : null}{" "}
+                <Loader2 className="animate-spin text-white inline-flex mr-2" />
+              ) : null}
               Submit
             </button>
           </form>
