@@ -4,12 +4,15 @@ import { Resend } from "resend";
 import CustomerInquiryTemplate from "./customer-inquery-template";
 
 const emailMap = {
-  WHOLESALE: "nick@yywireless.com",
-  "CUSTOMER SERVICE": "cs@yywireless.com",
-  RETAIL: "cs@yywireless.com",
-  GENERAL: "cs@yywireless.com",
-  MARKETING: "kitty@yywireless.com",
-  CAREER: "brianne@yywireless.com",
+  WHOLESALE: "nick+websitecontact@yywireless.com",
+  "CUSTOMER SERVICE": "cs+websitecontact@yywireless.com",
+  RETAIL: "cs+websitecontact@yywireless.com",
+  GENERAL: "cs+websitecontact@yywireless.com",
+  MARKETING: "kitty+websitecontact@yywireless.com",
+  CAREER: "brianne+websitecontact@yywireless.com",
+  "SELL TO US": "kitty+websitecontact@yywireless.com",
+  "SELL / RECYCLE TO US": "kitty+websitecontact@yywireless.com",
+  "IT SUPPORT": "anthonyb+itsupport@yywireless.com",
 } as const;
 
 type emailMapType = keyof typeof emailMap;

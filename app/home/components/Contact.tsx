@@ -16,12 +16,14 @@ import { toCapitalCase } from "@/lib/utils";
 
 const Contact = () => {
   const items = [
-    "Wholesale",
-    "Customer Service",
-    "Retail",
-    "General",
-    "Marketing",
-    "Career",
+    "WHOLESALE",
+    "CUSTOMER SERVICE",
+    "RETAIL",
+    "GENERAL",
+    "MARKETING",
+    "CAREER",
+    "SELL / RECYCLE TO US",
+    "IT SUPPORT",
   ];
 
   const FormDialog = ({ contactType }: { contactType: string }) => {

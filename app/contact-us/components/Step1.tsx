@@ -60,6 +60,16 @@ const ContactPage = () => {
       description:
         "Not sure where to start? Send your question here and we'll route it to the right team.",
     },
+    {
+      title: "SELL / RECYCLE TO US",
+      description:
+        "Interested in selling or recycling with us? Send your inquiries here and we will get back to you soon.",
+    },
+    {
+      title: "IT Support",
+      description:
+        "Have a technical question with one of our services? Let us know and we can help.",
+    },
   ];
 
   const FormDialog = ({
@@ -216,7 +226,7 @@ const ContactPage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl w-full mb-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl w-full mb-14">
           {contactItems.map((item, index) => (
             <FormDialog key={index} contactItem={item} />
           ))}
